@@ -1,5 +1,5 @@
 import React, { useState, useMemo } from 'react';
-import { appData } from '../config';
+import { appData } from '../../config';
 import './AllTopics.css';
 
 const AllTopics = ({ onTopicSelect, onSubtopicSelect }) => {
