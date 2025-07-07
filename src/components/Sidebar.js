@@ -16,12 +16,9 @@ const Sidebar = ({
   const [hoveredTopic, setHoveredTopic] = useState(null);
 
   const handleTopicClick = (topicId) => {
-    if (selectedTopic === topicId) {
-      // If clicking the same topic, toggle it
-      onTopicSelect(null);
-    } else {
-      onTopicSelect(topicId);
-    }
+    // Always select the topic (no toggling behavior)
+    // This ensures the topic stays expanded when navigating to it
+    onTopicSelect(topicId);
   };
 
   const handleSubtopicClick = (subtopicId) => {
