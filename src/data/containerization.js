@@ -167,7 +167,7 @@ services:
     environment:
       POSTGRES_DB: myapp
       POSTGRES_USER: user
-      POSTGRES_PASSWORD: ${DB_PASSWORD}
+      POSTGRES_PASSWORD: \${DB_PASSWORD}
     volumes:
       - postgres_data:/var/lib/postgresql/data
     networks:

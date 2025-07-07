@@ -66,7 +66,7 @@ function validateIPv6(ip) {
 \`\`\`
 
 **IP Header Structure:**
-```
+\`\`\`
  0                   1                   2                   3
  0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1
 +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
@@ -80,7 +80,7 @@ function validateIPv6(ip) {
 +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
 |                    Destination Address                        |
 +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
-```
+\`\`\`
 
 ### 2. TCP (Transmission Control Protocol)
 
@@ -92,7 +92,7 @@ function validateIPv6(ip) {
 - Error detection and recovery
 
 **TCP Three-Way Handshake:**
-```
+\`\`\`
 Client                    Server
   |                        |
   |-------SYN(seq=x)------>|
@@ -102,10 +102,10 @@ Client                    Server
   |-------ACK(ack=y+1)---->|
   |                        |
   |   Connection Established|
-```
+\`\`\`
 
 **TCP State Machine:**
-```javascript
+\`\`\`javascript
 const TCPStates = {
   CLOSED: 'CLOSED',
   LISTEN: 'LISTEN',
@@ -151,10 +151,10 @@ class TCPConnection {
     }
   }
 }
-```
+\`\`\`
 
 **TCP Header Structure:**
-```
+\`\`\`
  0                   1                   2                   3
  0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1
 +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
@@ -170,7 +170,7 @@ class TCPConnection {
 +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
 |           Checksum            |         Urgent Pointer        |
 +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
-```
+\`\`\`
 
 ### 3. UDP (User Datagram Protocol)
 
@@ -182,7 +182,7 @@ class TCPConnection {
 - No error recovery
 
 **UDP Header Structure:**
-```
+\`\`\`
  0      7 8     15 16    23 24    31
 +--------+--------+--------+--------+
 |     Source      |   Destination   |
@@ -194,10 +194,10 @@ class TCPConnection {
 |
 |          data octets ...
 +---------------- ...
-```
+\`\`\`
 
 **UDP Implementation Example:**
-```javascript
+\`\`\`javascript
 class UDPSocket {
   constructor(port) {
     this.port = port;
@@ -229,23 +229,23 @@ class UDPSocket {
     return (~sum) & 0xFFFF;
   }
 }
-```
+\`\`\`
 
 ## Application Layer Protocols
 
 ### 1. HTTP (HyperText Transfer Protocol)
 
 **Request Structure:**
-```
+\`\`\`
 GET /index.html HTTP/1.1
 Host: www.example.com
 User-Agent: Mozilla/5.0
 Accept: text/html,application/xhtml+xml
 Connection: keep-alive
-```
+\`\`\`
 
 **Response Structure:**
-```
+\`\`\`
 HTTP/1.1 200 OK
 Content-Type: text/html
 Content-Length: 1234
@@ -253,10 +253,10 @@ Server: Apache/2.4.41
 Date: Mon, 01 Jan 2024 12:00:00 GMT
 
 <html>...</html>
-```
+\`\`\`
 
 **HTTP Methods:**
-```javascript
+\`\`\`javascript
 const HTTPMethods = {
   GET: 'Retrieve data',
   POST: 'Submit data',
@@ -267,12 +267,12 @@ const HTTPMethods = {
   OPTIONS: 'Get allowed methods',
   TRACE: 'Echo request'
 };
-```
+\`\`\`
 
 ### 2. HTTPS (HTTP Secure)
 
 **TLS Handshake Process:**
-```
+\`\`\`
 Client                    Server
   |                        |
   |----ClientHello-------->|
@@ -290,12 +290,12 @@ Client                    Server
   |                        |
   | Application Data       |
   |<---------------------->|
-```
+\`\`\`
 
 ### 3. DNS (Domain Name System)
 
 **DNS Query Types:**
-```javascript
+\`\`\`javascript
 const DNSRecordTypes = {
   A: 'IPv4 address',
   AAAA: 'IPv6 address',
@@ -307,10 +307,10 @@ const DNSRecordTypes = {
   TXT: 'Text record',
   SRV: 'Service record'
 };
-```
+\`\`\`
 
 **DNS Resolution Process:**
-```javascript
+\`\`\`javascript
 class DNSResolver {
   constructor() {
     this.cache = new Map();
@@ -344,12 +344,12 @@ class DNSResolver {
     }
   }
 }
-```
+\`\`\`
 
 ### 4. FTP (File Transfer Protocol)
 
 **FTP Commands:**
-```javascript
+\`\`\`javascript
 const FTPCommands = {
   USER: 'Username for login',
   PASS: 'Password for login',
@@ -363,7 +363,7 @@ const FTPCommands = {
   RMD: 'Remove directory',
   QUIT: 'Logout'
 };
-```
+\`\`\`
 
 **FTP Data Transfer Modes:**
 - **Active Mode**: Server initiates data connection
@@ -379,7 +379,7 @@ const FTPCommands = {
 - Periodic updates every 30 seconds
 - Simple configuration
 
-```javascript
+\`\`\`javascript
 class RIPRouter {
   constructor(routerId) {
     this.routerId = routerId;
@@ -419,7 +419,7 @@ class RIPRouter {
     });
   }
 }
-```
+\`\`\`
 
 ### 2. OSPF (Open Shortest Path First)
 
@@ -430,7 +430,7 @@ class RIPRouter {
 - Fast convergence
 
 **OSPF Packet Types:**
-```javascript
+\`\`\`javascript
 const OSPFPacketTypes = {
   HELLO: 1,           // Neighbor discovery
   DATABASE_DESCRIPTION: 2, // Database synchronization
@@ -438,7 +438,7 @@ const OSPFPacketTypes = {
   LINK_STATE_UPDATE: 4,    // Send LSAs
   LINK_STATE_ACK: 5        // Acknowledge LSAs
 };
-```
+\`\`\`
 
 ### 3. BGP (Border Gateway Protocol)
 
@@ -448,7 +448,7 @@ const OSPFPacketTypes = {
 - Policy-based routing
 - Prevents routing loops
 
-```javascript
+\`\`\`javascript
 class BGPRouter {
   constructor(asNumber) {
     this.asNumber = asNumber;
@@ -478,7 +478,7 @@ class BGPRouter {
     });
   }
 }
-```
+\`\`\`
 
 ## Security Protocols
 
@@ -491,7 +491,7 @@ class BGPRouter {
 - TLS 1.3 (2018) - Latest standard
 
 **Cipher Suites:**
-```javascript
+\`\`\`javascript
 const TLSCipherSuites = {
   'TLS_AES_128_GCM_SHA256': {
     keyExchange: 'ECDHE',
@@ -506,7 +506,7 @@ const TLSCipherSuites = {
     hash: 'SHA384'
   }
 };
-```
+\`\`\`
 
 ### 2. IPSec (Internet Protocol Security)
 
@@ -523,7 +523,7 @@ const TLSCipherSuites = {
 ### 1. SNMP (Simple Network Management Protocol)
 
 **SNMP Operations:**
-```javascript
+\`\`\`javascript
 const SNMPOperations = {
   GET: 'Retrieve specific value',
   GETNEXT: 'Retrieve next value',
@@ -565,12 +565,12 @@ class SNMPAgent {
     this.transmitTrap(trap);
   }
 }
-```
+\`\`\`
 
 ### 2. ICMP (Internet Control Message Protocol)
 
 **ICMP Message Types:**
-```javascript
+\`\`\`javascript
 const ICMPTypes = {
   0: 'Echo Reply',
   3: 'Destination Unreachable',
@@ -603,7 +603,7 @@ class ICMPHandler {
     };
   }
 }
-```
+\`\`\`
 
 ## Protocol Performance Characteristics
 
@@ -619,7 +619,7 @@ class ICMPHandler {
 
 ### Throughput Considerations
 
-```javascript
+\`\`\`javascript
 // TCP throughput calculation
 function calculateTCPThroughput(windowSize, rtt) {
   // Throughput = Window Size / Round Trip Time
@@ -631,7 +631,7 @@ function calculateUDPPacketRate(bandwidth, packetSize) {
   // Packets per second = Bandwidth / (Packet Size * 8)
   return bandwidth / (packetSize * 8);
 }
-```
+\`\`\`
 
 ## Protocol Selection Guidelines
 
@@ -649,7 +649,7 @@ function calculateUDPPacketRate(bandwidth, packetSize) {
 
 ### Best Practices
 
-```javascript
+\`\`\`javascript
 // Protocol configuration example
 const protocolConfig = {
   web: {
@@ -674,7 +674,7 @@ const protocolConfig = {
     retransmissionTimeout: 3000
   }
 };
-```
+\`\`\`
 
 ## Emerging Protocols
 
@@ -694,7 +694,7 @@ const protocolConfig = {
 - Bidirectional streaming
 - Language agnostic
 
-```javascript
+\`\`\`javascript
 // gRPC service definition
 const grpcService = {
   GetUser: {
@@ -713,7 +713,7 @@ const grpcService = {
     responseStream: true
   }
 };
-```
+\`\`\`
 
 ### 3. WebRTC
 

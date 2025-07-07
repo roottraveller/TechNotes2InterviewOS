@@ -344,7 +344,7 @@ Databases can be categorized based on their data model, storage mechanism, and i
 
 ### 1. Database Selection
 
-```javascript
+\`\`\`javascript
 // Decision framework
 const selectDatabase = (requirements) => {
   const factors = {
@@ -357,11 +357,11 @@ const selectDatabase = (requirements) => {
   
   return analyzeFactors(factors);
 };
-```
+\`\`\`
 
 ### 2. Polyglot Persistence
 
-```javascript
+\`\`\`javascript
 // Using multiple databases for different purposes
 const architectureExample = {
   userProfiles: 'PostgreSQL',      // Structured data, ACID
@@ -371,11 +371,11 @@ const architectureExample = {
   analytics: 'ClickHouse',         // Time-series, OLAP
   search: 'Elasticsearch'          // Full-text search
 };
-```
+\`\`\`
 
 ### 3. Migration Strategies
 
-```sql
+\`\`\`sql
 -- Gradual migration approach
 -- 1. Set up new database alongside existing
 -- 2. Implement dual writes
@@ -389,13 +389,13 @@ BEGIN;
   INSERT INTO legacy_users (id, name, email) VALUES (1, 'John', 'john@example.com');
   -- Also write to MongoDB
 COMMIT;
-```
+\`\`\`
 
 ## Common Anti-Patterns
 
 ### 1. Wrong Database Choice
 
-```javascript
+\`\`\`javascript
 // Anti-pattern: Using RDBMS for everything
 const badExample = {
   userSessions: 'PostgreSQL',    // Should use Redis
@@ -411,11 +411,11 @@ const goodExample = {
   socialGraph: 'Neo4j',
   cache: 'Memcached'
 };
-```
+\`\`\`
 
 ### 2. Over-normalization in NoSQL
 
-```javascript
+\`\`\`javascript
 // Anti-pattern: Treating NoSQL like RDBMS
 const overNormalized = {
   users: { id: 1, name: 'John' },
@@ -435,7 +435,7 @@ const denormalized = {
     ]
   }
 };
-```
+\`\`\`
 
 ## Emerging Trends
 

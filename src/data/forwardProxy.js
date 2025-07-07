@@ -276,7 +276,7 @@ class ForwardProxy {
   
   // Handle HTTP requests
   handleRequest(clientReq, clientRes) {
-    console.log(`Proxying: ${clientReq.url}`);
+    console.log(\`Proxying: \${clientReq.url}\`);
     
     const parsedUrl = url.parse(clientReq.url);
     const options = {
@@ -304,7 +304,7 @@ class ForwardProxy {
   // Handle HTTPS CONNECT method
   handleConnect(req, clientSocket, head) {
     const [hostname, port] = req.url.split(':');
-    console.log(`CONNECT ${hostname}:${port}`);
+    console.log(\`CONNECT \${hostname}:\${port}\`);
     
     const serverSocket = net.connect(port || 443, hostname, () => {
       clientSocket.write('HTTP/1.1 200 Connection Established\\r\\n\\r\\n');
@@ -320,7 +320,7 @@ class ForwardProxy {
   
   start() {
     this.server.listen(this.port, () => {
-      console.log(`Forward proxy listening on port ${this.port}`);
+      console.log(\`Forward proxy listening on port \${this.port}\`);
     });
   }
 }
@@ -431,7 +431,7 @@ class PrivacyProxy {
   // Implement log rotation
   writeToRotatingLog(entry) {
     const date = new Date().toISOString().split('T')[0];
-    const logFile = `proxy-${date}.log`;
+    const logFile = \`proxy-\${date}.log\`;
     fs.appendFileSync(logFile, JSON.stringify(entry) + '\\n');
   }
 }</code></pre>
@@ -491,7 +491,7 @@ class CachingProxy {
   }
   
   getCacheKey(req) {
-    return `${req.method}:${req.url}`;
+    return \`\${req.method}:\${req.url}\`;
   }
   
   isCacheable(req, res) {

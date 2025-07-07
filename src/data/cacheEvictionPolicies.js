@@ -24,7 +24,7 @@ When a cache reaches its capacity limit, it must decide which existing entries t
 - Based on temporal locality principle
 
 **Implementation:**
-```javascript
+\`\`\`javascript
 class LRUCache {
   constructor(capacity) {
     this.capacity = capacity;
@@ -53,7 +53,7 @@ class LRUCache {
     this.cache.set(key, value);
   }
 }
-```
+\`\`\`
 
 **Advantages:**
 - Good performance for temporal locality
@@ -79,7 +79,7 @@ class LRUCache {
 - Based on frequency of access pattern
 
 **Implementation:**
-```javascript
+\`\`\`javascript
 class LFUCache {
   constructor(capacity) {
     this.capacity = capacity;
@@ -136,7 +136,7 @@ class LFUCache {
     this.removeFromFreqGroup(keyToEvict, this.minFreq);
   }
 }
-```
+\`\`\`
 
 **Advantages:**
 - Excellent for workloads with clear frequency patterns
@@ -163,7 +163,7 @@ class LFUCache {
 - No consideration of access patterns
 
 **Implementation:**
-```javascript
+\`\`\`javascript
 class FIFOCache {
   constructor(capacity) {
     this.capacity = capacity;
@@ -190,7 +190,7 @@ class FIFOCache {
     this.queue.push(key);
   }
 }
-```
+\`\`\`
 
 **Advantages:**
 - Simple implementation
@@ -217,7 +217,7 @@ class FIFOCache {
 - Opposite of FIFO approach
 
 **Implementation:**
-```javascript
+\`\`\`javascript
 class LIFOCache {
   constructor(capacity) {
     this.capacity = capacity;
@@ -244,7 +244,7 @@ class LIFOCache {
     this.stack.push(key);
   }
 }
-```
+\`\`\`
 
 **Use Cases:**
 - Stack-like data access patterns
@@ -260,7 +260,7 @@ class LIFOCache {
 - Probabilistically fair
 
 **Implementation:**
-```javascript
+\`\`\`javascript
 class RandomCache {
   constructor(capacity) {
     this.capacity = capacity;
@@ -290,7 +290,7 @@ class RandomCache {
     this.keys.push(key);
   }
 }
-```
+\`\`\`
 
 **Advantages:**
 - Simple implementation
@@ -337,7 +337,7 @@ class RandomCache {
 - Eviction from A1 or Am based on sizes
 
 **Implementation Concept:**
-```javascript
+\`\`\`javascript
 class TwoQCache {
   constructor(capacity) {
     this.capacity = capacity;
@@ -366,7 +366,7 @@ class TwoQCache {
     return -1;
   }
 }
-```
+\`\`\`
 
 **Advantages:**
 - Better scan resistance than LRU
@@ -436,7 +436,7 @@ class TwoQCache {
 
 ### 1. Thread Safety
 
-```javascript
+\`\`\`javascript
 class ThreadSafeLRUCache {
   constructor(capacity) {
     this.cache = new LRUCache(capacity);
@@ -461,11 +461,11 @@ class ThreadSafeLRUCache {
     }
   }
 }
-```
+\`\`\`
 
 ### 2. Memory Efficiency
 
-```javascript
+\`\`\`javascript
 // Compact LRU using doubly-linked list
 class CompactLRU {
   constructor(capacity) {
@@ -501,11 +501,11 @@ class CompactLRU {
     return lastNode;
   }
 }
-```
+\`\`\`
 
 ### 3. Performance Optimization
 
-```javascript
+\`\`\`javascript
 // Lock-free LRU using atomic operations
 class LockFreeLRU {
   constructor(capacity) {
@@ -539,13 +539,13 @@ class LockFreeLRU {
     this.getSegment(key).put(key, value);
   }
 }
-```
+\`\`\`
 
 ## Best Practices
 
 ### 1. Policy Selection
 
-```javascript
+\`\`\`javascript
 // Decision framework for policy selection
 function selectEvictionPolicy(workloadCharacteristics) {
   const {
@@ -578,11 +578,11 @@ function selectEvictionPolicy(workloadCharacteristics) {
   
   return 'LRU'; // Default choice
 }
-```
+\`\`\`
 
 ### 2. Monitoring and Tuning
 
-```javascript
+\`\`\`javascript
 class CacheMetrics {
   constructor() {
     this.hits = 0;
@@ -620,11 +620,11 @@ class CacheMetrics {
     return hitRate < 0.8 || evictionRate > 100; // Thresholds
   }
 }
-```
+\`\`\`
 
 ### 3. Hybrid Approaches
 
-```javascript
+\`\`\`javascript
 // Multi-tier cache with different policies
 class HybridCache {
   constructor(l1Size, l2Size) {
@@ -658,13 +658,13 @@ class HybridCache {
     this.l2.put(key, value);
   }
 }
-```
+\`\`\`
 
 ## Common Pitfalls
 
 ### 1. Wrong Policy Choice
 
-```javascript
+\`\`\`javascript
 // Anti-pattern: Using LRU for sequential scans
 const badChoice = {
   workload: 'large sequential file processing',
@@ -678,11 +678,11 @@ const goodChoice = {
   policy: '2Q',
   result: 'maintains cache for hot data'
 };
-```
+\`\`\`
 
 ### 2. Ignoring Overhead
 
-```javascript
+\`\`\`javascript
 // Consider implementation overhead
 const overheadComparison = {
   FIFO: { memory: 'O(1)', cpu: 'O(1)' },
@@ -690,11 +690,11 @@ const overheadComparison = {
   LFU: { memory: 'O(n)', cpu: 'O(log n)' },
   ARC: { memory: 'O(n)', cpu: 'O(1)' }
 };
-```
+\`\`\`
 
 ### 3. Static Configuration
 
-```javascript
+\`\`\`javascript
 // Anti-pattern: Fixed cache policy
 const staticCache = new LRUCache(1000);
 
@@ -714,7 +714,7 @@ class AdaptiveCache {
     }
   }
 }
-```
+\`\`\`
 
 ## Conclusion
 

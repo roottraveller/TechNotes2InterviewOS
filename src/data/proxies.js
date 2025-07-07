@@ -89,7 +89,7 @@ const proxy = httpProxy.createProxyServer({});
 // Proxy middleware
 const proxyServer = http.createServer((req, res) => {
   // Log requests
-  console.log(`Proxying: ${req.method} ${req.url}`);
+  console.log(\`Proxying: \${req.method} \${req.url}\`);
   
   // Access control
   if (isBlocked(req.url)) {
@@ -482,7 +482,7 @@ class ProxyConnectionPool {
   }
   
   getConnection(host, port) {
-    const key = `${host}:${port}`;
+    const key = \`\${host}:\${port}\`;
     let connections = this.pool.get(key) || [];
     
     // Reuse existing connection
@@ -508,7 +508,7 @@ class ProxyConnectionPool {
   }
   
   releaseConnection(host, port, socket) {
-    const key = `${host}:${port}`;
+    const key = \`\${host}:\${port}\`;
     const connections = this.pool.get(key) || [];
     const conn = connections.find(c => c.socket === socket);
     if (conn) {

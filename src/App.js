@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Header from './components/Header';
 import Sidebar from './components/Sidebar';
 import ContentPanel from './components/ContentPanel';
-import { sampleData } from './data/sampleData';
+import { techTopicsData } from './data/techTopicsData';
 import './App.css';
 
 function App() {
@@ -185,11 +185,11 @@ function App() {
             
             <div class="stats-section">
               <div class="stat-item">
-                <div class="stat-number">${sampleData.topics.length}</div>
+                <div class="stat-number">${techTopicsData.topics.length}</div>
                 <div class="stat-label">Topics</div>
               </div>
               <div class="stat-item">
-                <div class="stat-number">${sampleData.topics.reduce((total, topic) => total + topic.subtopics.length, 0)}</div>
+                <div class="stat-number">${techTopicsData.topics.reduce((total, topic) => total + topic.subtopics.length, 0)}</div>
                 <div class="stat-label">Subtopics</div>
               </div>
               <div class="stat-item">
@@ -202,7 +202,7 @@ function App() {
       };
     }
 
-    const topic = sampleData.topics.find(t => t.id === selectedTopic);
+    const topic = techTopicsData.topics.find(t => t.id === selectedTopic);
     const subtopic = topic?.subtopics.find(s => s.id === selectedSubtopic);
     
     return subtopic || { title: 'Content not found', content: '<p>The requested content could not be found.</p>' };
@@ -223,7 +223,7 @@ function App() {
           // Mobile layout
           <>
             <Sidebar
-              topics={sampleData.topics}
+              topics={techTopicsData.topics}
               selectedTopic={selectedTopic}
               selectedSubtopic={selectedSubtopic}
               onTopicSelect={handleTopicSelect}
@@ -239,7 +239,7 @@ function App() {
           <div className="desktop-layout">
             <div className={`sidebar-container ${isSidebarCollapsed ? 'collapsed' : ''}`}>
               <Sidebar
-                topics={sampleData.topics}
+                topics={techTopicsData.topics}
                 selectedTopic={selectedTopic}
                 selectedSubtopic={selectedSubtopic}
                 onTopicSelect={handleTopicSelect}

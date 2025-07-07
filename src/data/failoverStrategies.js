@@ -347,7 +347,7 @@ class ServiceClient {
     });
     
     if (!response.ok) {
-      throw new Error(`HTTP ${response.status}`);
+      throw new Error(\`HTTP \${response.status}\`);
     }
     
     return response.json();
