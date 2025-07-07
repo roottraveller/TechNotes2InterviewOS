@@ -1,0 +1,115 @@
+***Note: Use [https://chat.openai.com](https://chat.openai.com)  as a search engine.***   
+32-bit vs 64 bit System Architecture  
+API gateway  
+Application Server and Web Server  
+Authentication and Authorization  
+B-Tree and B+ Tree  
+Bare Metal vs Virtualization (VMware) vs Containerization (Docker)  
+BCP/DR (Business Continuity Plan/Disaster Recovery)  
+BGP (Border Gateway Protocol)  
+Blocking vs Non-blocking IO  
+C in ACID vs CAP  
+Cache Strategies  
+CAP Theorem  
+CDC (Change Data Capture)  
+CDN  
+Chaos Engineering   
+Characteristics of a Distributed Database   
+Checksum  
+Circuit Breaker  
+Circular Buffer   
+Cloud Computing  
+Colocation (i.e. colo)  
+Command Query Responsibility Segregation (CQRS)  
+Commit Log  
+Communication in Distributed Systems  
+Compression and Decompression  
+Concurrency Control Problems in Database  
+Connection Pooling  
+Consistency models  
+Consistent Hashing    
+Consistent Hashing vs Load Balancing   
+CORS (Cross-Origin Resource Sharing)  
+Cross-Site Request Forgery (CSRF)  
+Data Replication   
+Database Design Principal   
+Deployment strategies  
+Distributed Consensus  
+Distributed Denial of Service (DDoS)  
+Distributed Transaction  
+DNS (Domain Name System)  
+Elasticity vs Scalability  
+Encoding and Decoding  
+Encryption and Decryption  
+Ephemeral Port   
+Fail-safe vs Fail-fast Design Principle  
+Fragmentation and Defragmentation  
+Geocoding   
+Geofencing   
+Geohashing   
+Graceful Shutdown  
+Hashing/Hash Function  
+Hinted Handoff    
+How Does HTTP Work?  
+HTTP Headers  
+HTTP Long Polling   
+HTTP Status Code  
+HTTP vs HTTP2  
+HTTP vs HTTPS   
+Idempotency  
+Inside Look at Modern Web Browser   
+IP Whitelisting  
+JWT (JSON Web Token)  
+Key Exchange Algorithms  
+Latency Numbers Every Programmer Should Know  
+Linearizability  
+Load Balancer (LB)  
+Locality of reference  
+Log-structured merge tree (LSM tree)   
+Loosely Coupled and Tightly Coupled   
+Memtable  
+Merkle Tree (Binary Hash Tree)  
+Mitigate Concurrency Control Problems in Database  
+Multi-node Architecture   
+Network Architectures  
+Network Protocols  
+Network Topology     
+North Star Metric (NSM)
+OAuth 2.0    
+OSI (Open Systems Interconnection) Model   
+PACELC Theorem   
+Paging in OS   
+Probabilistic Data Structures (PDS)  
+Properties of a Distributed System   
+Proxy Servers  
+QPS vs RPS   
+Quad Tree   
+Quorum  
+Rate Limiting  
+Resource Starvation   
+Serialization and Deserialization  
+Service Discovery   
+Sharding and Partitioning   
+Single Point of Failure (SPOF)  
+SLA vs SLO   
+SSTable (Sorted String Tables)  
+Stateful vs Stateless Connection  
+Stateless and Stateful Servers   
+Sticky Sessions  
+Strangler Pattern  
+Switch vs Router   
+TCP (Ack needed) vs. UDP    
+TCP Connection (TCP Socket)  
+TCP/IP Model   
+The Unix epoch is 00:00:00 Coordinated Universal Time (UTC) on 1 January 1970\.  
+Thundering Herd Problem  
+Type of ACID Transaction   
+Type of Microservice architecture   
+Types of Databases  
+Types of Recovery  
+UML Diagram  
+Unicode Characters   
+URL vs URI vs URN   
+Vertical Scaling vs Horizontal Scaling   
+WebSockets  
+Write Ahead Log (WAL)  
