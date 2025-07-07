@@ -2,7 +2,7 @@
   "name": "interview-os",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://roottraveller.github.io/TechNotes2InterviewOS",
+  "homepage": "https://roottraveller.github.io/InterviewOS",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.3.0",
