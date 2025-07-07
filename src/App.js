@@ -2,12 +2,14 @@ import React, { useState, useEffect } from 'react';
 import Header from './components/Header';
 import Sidebar from './components/Sidebar';
 import ContentPanel from './components/ContentPanel';
+import About from './components/About';
 import { appData } from './config';
 import './App.css';
 
 function App() {
   const [selectedTopic, setSelectedTopic] = useState(null);
   const [selectedSubtopic, setSelectedSubtopic] = useState(null);
+  const [showAbout, setShowAbout] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isDarkMode, setIsDarkMode] = useState(false);
@@ -45,37 +47,25 @@ function App() {
     }
   }, []);
 
-  // Apply dark mode class to document
+  // Save dark mode preference to localStorage
   useEffect(() => {
-    if (isDarkMode) {
-      document.documentElement.classList.add('dark-mode');
-    } else {
-      document.documentElement.classList.remove('dark-mode');
-    }
-    
-    // Save preference to localStorage
     localStorage.setItem('interviewos-theme', isDarkMode ? 'dark' : 'light');
   }, [isDarkMode]);
 
-  // Save sidebar collapse state to localStorage
+  // Save sidebar collapse preference to localStorage
   useEffect(() => {
     localStorage.setItem('interviewos-sidebar-collapsed', isSidebarCollapsed.toString());
   }, [isSidebarCollapsed]);
 
-  // Close mobile menu when switching to desktop
-  useEffect(() => {
-    if (!isMobile) {
-      setIsMobileMenuOpen(false);
-    }
-  }, [isMobile]);
-
   const handleTopicSelect = (topicId) => {
     setSelectedTopic(topicId);
     setSelectedSubtopic(null);
+    setShowAbout(false);
   };
 
   const handleSubtopicSelect = (subtopicId) => {
     setSelectedSubtopic(subtopicId);
+    setShowAbout(false);
   };
 
   const handleMobileMenuToggle = () => {
@@ -95,6 +85,28 @@ function App() {
   };
 
   const handleHomeClick = () => {
+    setSelectedTopic(null);
+    setSelectedSubtopic(null);
+    setShowAbout(false);
+    // Close mobile menu if open
+    if (isMobileMenuOpen) {
+      setIsMobileMenuOpen(false);
+    }
+  };
+
+  const handleAboutClick = () => {
+    setShowAbout(true);
+    setSelectedTopic(null);
+    setSelectedSubtopic(null);
+    // Close mobile menu if open
+    if (isMobileMenuOpen) {
+      setIsMobileMenuOpen(false);
+    }
+  };
+
+  const handleTopicsClick = () => {
+    // Just go back to home/welcome screen
+    setShowAbout(false);
     setSelectedTopic(null);
     setSelectedSubtopic(null);
     // Close mobile menu if open
@@ -150,27 +162,8 @@ function App() {
             
             <div class="getting-started">
               <h2>Getting Started</h2>
-              <p>Select a topic from the ${isMobile ? 'menu' : isSidebarCollapsed ? 'collapsed sidebar (click the arrow to expand)' : 'sidebar'} to begin your learning journey:</p>
-              <ul class="steps-list">
-                <li><strong>Browse</strong> through different technical domains</li>
-                <li><strong>Expand</strong> topics to see detailed subtopics</li>
-                <li><strong>Click</strong> on any subtopic to view comprehensive notes</li>
-                <li><strong>Practice</strong> with code examples and explanations</li>
-              </ul>
-            </div>
-            
-            ${isMobile ? `
-              <div class="mobile-tip">
-                <div class="tip-icon">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <circle cx="12" cy="12" r="10"></circle>
-                    <line x1="12" y1="16" x2="12" y2="12"></line>
-                    <line x1="12" y1="8" x2="12.01" y2="8"></line>
-                  </svg>
-                </div>
-                <p><strong>Mobile Tip:</strong> Use the menu button in the top-right corner to access all topics and navigation options.</p>
-              </div>
-            ` : `
+              <p>Select a topic from the ${isMobile ? 'menu' : 'sidebar'} to begin exploring technical concepts and interview questions.</p>
+              ${!isMobile ? `
               <div class="desktop-tip">
                 <div class="tip-icon">
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -181,7 +174,7 @@ function App() {
                 </div>
                 <p><strong>Desktop Tip:</strong> Use the toggle button to collapse/expand the sidebar for more reading space. The sidebar is ${isSidebarCollapsed ? 'currently collapsed' : 'currently expanded'}.</p>
               </div>
-            `}
+            ` : ''}
             
             <div class="stats-section">
               <div class="stat-item">
@@ -214,12 +207,19 @@ function App() {
         onMenuToggle={handleMobileMenuToggle}
         isMobileMenuOpen={isMobileMenuOpen}
         isMobile={isMobile}
+        selectedTopic={selectedTopic}
+        selectedSubtopic={selectedSubtopic}
         isDarkMode={isDarkMode}
         onThemeToggle={handleThemeToggle}
         onHomeClick={handleHomeClick}
+        onAboutClick={handleAboutClick}
+        onTopicsClick={handleTopicsClick}
       />
       <div className="app-body">
-        {isMobile ? (
+        {showAbout ? (
+          // About page
+          <About />
+        ) : isMobile ? (
           // Mobile layout
           <>
             <Sidebar

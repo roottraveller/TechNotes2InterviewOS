@@ -7,9 +7,11 @@ const Header = ({
   isMobile, 
   selectedTopic, 
   selectedSubtopic,
-  isDarkMode,
-  onThemeToggle,
-  onHomeClick
+  isDarkMode, 
+  onThemeToggle, 
+  onHomeClick, 
+  onAboutClick,
+  onTopicsClick
 }) => {
   return (
     <>
@@ -29,14 +31,14 @@ const Header = ({
                 </span>
                 InterviewOS
               </h1>
-              <span className="header-subtitle">Technical Interview Preparation</span>
+              <span className="header-subtitle">Made with ❤️ by roottraveller</span>
             </div>
           </div>
           <div className="header-right">
             <nav className="header-nav">
-              <a href="#about" className="nav-link">About</a>
-              <a href="#topics" className="nav-link">Topics</a>
-              <a href="#practice" className="nav-link">Practice</a>
+              <button className="nav-link" onClick={onAboutClick}>About</button>
+              <button className="nav-link" onClick={onTopicsClick}>All Topics</button>
+              <button className="nav-link" onClick={onHomeClick}>Practice</button>
               <button 
                 className="theme-toggle" 
                 onClick={onThemeToggle}
@@ -99,12 +101,12 @@ const Header = ({
           </div>
         </div>
       </header>
-      
+
       {/* Mobile navigation overlay */}
       {isMobile && (
         <div className={`mobile-nav-overlay ${isMobileMenuOpen ? 'open' : ''}`}>
           <nav className="mobile-nav-links">
-            <a href="#about" className="mobile-nav-link" onClick={onMenuToggle}>
+            <button className="mobile-nav-link" onClick={() => { onAboutClick(); onMenuToggle(); }}>
               <span className="nav-icon">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <circle cx="12" cy="12" r="10"></circle>
@@ -113,17 +115,17 @@ const Header = ({
                 </svg>
               </span>
               About
-            </a>
-            <a href="#topics" className="mobile-nav-link" onClick={onMenuToggle}>
+            </button>
+            <button className="mobile-nav-link" onClick={() => { onTopicsClick(); onMenuToggle(); }}>
               <span className="nav-icon">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
                   <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
                 </svg>
               </span>
-              Topics
-            </a>
-            <a href="#practice" className="mobile-nav-link" onClick={onMenuToggle}>
+              All Topics
+            </button>
+            <button className="mobile-nav-link" onClick={() => { onHomeClick(); onMenuToggle(); }}>
               <span className="nav-icon">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
@@ -134,7 +136,7 @@ const Header = ({
                 </svg>
               </span>
               Practice
-            </a>
+            </button>
             <div className="mobile-nav-divider"></div>
             <button 
               className="mobile-theme-toggle" 
