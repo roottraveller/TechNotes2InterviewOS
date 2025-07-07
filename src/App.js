@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { HashRouter as Router, Routes, Route, useNavigate, useParams, useLocation } from 'react-router-dom';
+import { BrowserRouter, HashRouter, Routes, Route, useNavigate, useParams } from 'react-router-dom';
 import Header from './components/Header';
 import Sidebar from './components/Sidebar';
 import ContentPanel from './components/ContentPanel';
@@ -7,6 +7,9 @@ import About from './components/About';
 import AllTopics from './components/AllTopics';
 import { appData } from './config';
 import './App.css';
+
+// Use HashRouter for GitHub Pages deployment, BrowserRouter for local development
+const Router = process.env.NODE_ENV === 'production' ? HashRouter : BrowserRouter;
 
 // Main App Component with Router
 function AppContent() {
@@ -16,53 +19,53 @@ function AppContent() {
   const [isSidebarCollapsed, setIsSidebarCollapsed] = useState(false);
   
   const navigate = useNavigate();
-  const location = useLocation();
-  const { topicId, subtopicId } = useParams();
 
   // Check if device is mobile
+  const checkMobile = () => {
+    return window.innerWidth <= 768;
+  };
+
   useEffect(() => {
-    const checkMobile = () => {
-      setIsMobile(window.innerWidth <= 768);
+    const handleResize = () => {
+      setIsMobile(checkMobile());
     };
 
-    checkMobile();
-    window.addEventListener('resize', checkMobile);
-    
-    return () => window.removeEventListener('resize', checkMobile);
+    // Set initial state
+    setIsMobile(checkMobile());
+
+    // Add event listener
+    window.addEventListener('resize', handleResize);
+
+    // Cleanup
+    return () => window.removeEventListener('resize', handleResize);
   }, []);
 
-  // Load dark mode preference from localStorage
+  // Load theme preference
   useEffect(() => {
-    const savedTheme = localStorage.getItem('interviewos-theme');
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    
+    const savedTheme = localStorage.getItem('theme');
     if (savedTheme) {
       setIsDarkMode(savedTheme === 'dark');
-    } else {
-      setIsDarkMode(prefersDark);
     }
   }, []);
 
-  // Load sidebar collapse preference from localStorage
+  // Save theme preference
   useEffect(() => {
-    const savedSidebarState = localStorage.getItem('interviewos-sidebar-collapsed');
-    if (savedSidebarState) {
+    localStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
+    document.documentElement.setAttribute('data-theme', isDarkMode ? 'dark' : 'light');
+  }, [isDarkMode]);
+
+  // Load sidebar state
+  useEffect(() => {
+    const savedSidebarState = localStorage.getItem('sidebarCollapsed');
+    if (savedSidebarState !== null) {
       setIsSidebarCollapsed(savedSidebarState === 'true');
     }
   }, []);
 
-  // Save dark mode preference to localStorage
+  // Save sidebar state
   useEffect(() => {
-    localStorage.setItem('interviewos-theme', isDarkMode ? 'dark' : 'light');
-  }, [isDarkMode]);
-
-  // Save sidebar collapse preference to localStorage
-  useEffect(() => {
-    localStorage.setItem('interviewos-sidebar-collapsed', isSidebarCollapsed.toString());
+    localStorage.setItem('sidebarCollapsed', isSidebarCollapsed.toString());
   }, [isSidebarCollapsed]);
-
-  // Route changes are now handled by React Router Routes
-  // No need for manual state management
 
   const handleTopicSelect = (topicId) => {
     if (topicId) {
@@ -124,8 +127,9 @@ function AppContent() {
     }
   };
 
-  const getSelectedContent = () => {
-    if (!topicId || !subtopicId) {
+  // Component for the home route
+  const HomeRoute = () => {
+    const getSelectedContent = () => {
       return {
         title: 'Welcome to InterviewOS',
         content: `
@@ -202,12 +206,109 @@ function AppContent() {
           </div>
         `
       };
-    }
+    };
 
-    const topic = appData.topics.find(t => t.id === topicId);
-    const subtopic = topic?.subtopics.find(s => s.id === subtopicId);
+    return isMobile ? (
+      // Mobile layout
+      <>
+        <Sidebar
+          topics={appData.topics}
+          selectedTopic={null}
+          selectedSubtopic={null}
+          onTopicSelect={handleTopicSelect}
+          onSubtopicSelect={handleSubtopicSelect}
+          isMobile={isMobile}
+          isMobileMenuOpen={isMobileMenuOpen}
+          onMobileMenuClose={handleMobileMenuClose}
+        />
+        <ContentPanel content={getSelectedContent()} />
+      </>
+    ) : (
+      // Desktop layout with collapsible sidebar
+      <div className="desktop-layout">
+        <div className={`sidebar-container ${isSidebarCollapsed ? 'collapsed' : ''}`}>
+          <Sidebar
+            topics={appData.topics}
+            selectedTopic={null}
+            selectedSubtopic={null}
+            onTopicSelect={handleTopicSelect}
+            onSubtopicSelect={handleSubtopicSelect}
+            isMobile={isMobile}
+            isMobileMenuOpen={isMobileMenuOpen}
+            onMobileMenuClose={handleMobileMenuClose}
+            isCollapsed={isSidebarCollapsed}
+            onToggleCollapse={handleSidebarToggle}
+          />
+
+        </div>
+        <div className="content-container-wrapper">
+          <ContentPanel content={getSelectedContent()} />
+        </div>
+      </div>
+    );
+  };
+
+  // Component for the topic route
+  const TopicRoute = () => {
+    const { topicId, subtopicId } = useParams();
     
-    return subtopic || { title: 'Content not found', content: '<p>The requested content could not be found.</p>' };
+    const getSelectedContent = () => {
+      if (!topicId || !subtopicId) {
+        return {
+          title: 'Select a Subtopic',
+          content: `
+            <div class="select-subtopic-content">
+              <h2>Select a Subtopic</h2>
+              <p>Choose a subtopic from the sidebar to view its content.</p>
+            </div>
+          `
+        };
+      }
+
+      const topic = appData.topics.find(t => t.id === topicId);
+      const subtopic = topic?.subtopics.find(s => s.id === subtopicId);
+      
+      return subtopic || { title: 'Content not found', content: '<p>The requested content could not be found.</p>' };
+    };
+
+    return isMobile ? (
+      // Mobile layout
+      <>
+        <Sidebar
+          topics={appData.topics}
+          selectedTopic={topicId}
+          selectedSubtopic={subtopicId}
+          onTopicSelect={handleTopicSelect}
+          onSubtopicSelect={handleSubtopicSelect}
+          isMobile={isMobile}
+          isMobileMenuOpen={isMobileMenuOpen}
+          onMobileMenuClose={handleMobileMenuClose}
+        />
+        <ContentPanel content={getSelectedContent()} />
+      </>
+    ) : (
+      // Desktop layout with collapsible sidebar
+      <div className="desktop-layout">
+        <div className={`sidebar-container ${isSidebarCollapsed ? 'collapsed' : ''}`}>
+          <Sidebar
+            topics={appData.topics}
+            selectedTopic={topicId}
+            selectedSubtopic={subtopicId}
+            onTopicSelect={handleTopicSelect}
+            onSubtopicSelect={handleSubtopicSelect}
+            isMobile={isMobile}
+            isMobileMenuOpen={isMobileMenuOpen}
+            onMobileMenuClose={handleMobileMenuClose}
+            isCollapsed={isSidebarCollapsed}
+            onToggleCollapse={handleSidebarToggle}
+          />
+
+        </div>
+        <div className="content-container-wrapper">
+          <ContentPanel content={getSelectedContent()} />
+        </div>
+      </div>
+    );
   };
 
   return (
@@ -216,8 +317,8 @@ function AppContent() {
         onMenuToggle={handleMobileMenuToggle}
         isMobileMenuOpen={isMobileMenuOpen}
         isMobile={isMobile}
-        selectedTopic={topicId}
-        selectedSubtopic={subtopicId}
+        selectedTopic={null}
+        selectedSubtopic={null}
         isDarkMode={isDarkMode}
         onThemeToggle={handleThemeToggle}
         onHomeClick={handleHomeClick}
@@ -233,84 +334,8 @@ function AppContent() {
               onSubtopicSelect={handleSubtopicSelect}
             />
           } />
-          <Route path="/topic/:topicId/:subtopicId?" element={
-            isMobile ? (
-              // Mobile layout
-              <>
-                <Sidebar
-                  topics={appData.topics}
-                  selectedTopic={topicId}
-                  selectedSubtopic={subtopicId}
-                  onTopicSelect={handleTopicSelect}
-                  onSubtopicSelect={handleSubtopicSelect}
-                  isMobile={isMobile}
-                  isMobileMenuOpen={isMobileMenuOpen}
-                  onMobileMenuClose={handleMobileMenuClose}
-                />
-                <ContentPanel content={getSelectedContent()} />
-              </>
-            ) : (
-              // Desktop layout with collapsible sidebar
-              <div className="desktop-layout">
-                <div className={`sidebar-container ${isSidebarCollapsed ? 'collapsed' : ''}`}>
-                  <Sidebar
-                    topics={appData.topics}
-                    selectedTopic={topicId}
-                    selectedSubtopic={subtopicId}
-                    onTopicSelect={handleTopicSelect}
-                    onSubtopicSelect={handleSubtopicSelect}
-                    isMobile={isMobile}
-                    isMobileMenuOpen={isMobileMenuOpen}
-                    onMobileMenuClose={handleMobileMenuClose}
-                    isCollapsed={isSidebarCollapsed}
-                    onToggleCollapse={handleSidebarToggle}
-                  />
-                </div>
-                <div className="content-container-wrapper">
-                  <ContentPanel content={getSelectedContent()} />
-                </div>
-              </div>
-            )
-          } />
-          <Route path="/" element={
-            isMobile ? (
-              // Mobile layout
-              <>
-                <Sidebar
-                  topics={appData.topics}
-                  selectedTopic={topicId}
-                  selectedSubtopic={subtopicId}
-                  onTopicSelect={handleTopicSelect}
-                  onSubtopicSelect={handleSubtopicSelect}
-                  isMobile={isMobile}
-                  isMobileMenuOpen={isMobileMenuOpen}
-                  onMobileMenuClose={handleMobileMenuClose}
-                />
-                <ContentPanel content={getSelectedContent()} />
-              </>
-            ) : (
-              // Desktop layout with collapsible sidebar
-              <div className="desktop-layout">
-                <div className={`sidebar-container ${isSidebarCollapsed ? 'collapsed' : ''}`}>
-                  <Sidebar
-                    topics={appData.topics}
-                    selectedTopic={topicId}
-                    selectedSubtopic={subtopicId}
-                    onTopicSelect={handleTopicSelect}
-                    onSubtopicSelect={handleSubtopicSelect}
-                    isMobile={isMobile}
-                    isMobileMenuOpen={isMobileMenuOpen}
-                    onMobileMenuClose={handleMobileMenuClose}
-                    isCollapsed={isSidebarCollapsed}
-                    onToggleCollapse={handleSidebarToggle}
-                  />
-                </div>
-                <div className="content-container-wrapper">
-                  <ContentPanel content={getSelectedContent()} />
-                </div>
-              </div>
-            )
-          } />
+          <Route path="/topic/:topicId/:subtopicId?" element={<TopicRoute />} />
+          <Route path="/" element={<HomeRoute />} />
         </Routes>
       </div>
     </div>

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './Sidebar.css';
 
 const Sidebar = ({ 
@@ -16,9 +16,13 @@ const Sidebar = ({
   const [hoveredTopic, setHoveredTopic] = useState(null);
 
   const handleTopicClick = (topicId) => {
-    // Always select the topic (no toggling behavior)
-    // This ensures the topic stays expanded when navigating to it
-    onTopicSelect(topicId);
+    // Toggle behavior: if topic is already selected, deselect it (go to home)
+    // If topic is not selected, select it
+    if (selectedTopic === topicId) {
+      onTopicSelect(null); // This will navigate to home page
+    } else {
+      onTopicSelect(topicId);
+    }
   };
 
   const handleSubtopicClick = (subtopicId) => {
