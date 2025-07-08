@@ -1,8 +1,7 @@
 export const dns = {
   id: 'dns',
   title: 'DNS (Domain Name System)',
-  content: `# DNS (Domain Name System)
-
+  content: `
 ## Definition
 DNS is a hierarchical system that translates human-readable domain names into IP addresses.
 
@@ -38,5 +37,6 @@ DNS is a hierarchical system that translates human-readable domain names into IP
 
 ## Interview Questions
 **Q: Explain the DNS resolution process.**
-A: Browser checks caches, then queries DNS servers hierarchically from root to authoritative servers.`
+A: Browser checks caches, then queries DNS servers hierarchically from root to authoritative servers.
+`
 }; 

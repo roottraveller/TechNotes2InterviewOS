@@ -1,8 +1,7 @@
 export const websockets = {
   id: 'websockets',
   title: 'WebSockets',
-  content: `# WebSockets
-
+  content: `
 ## Definition
 WebSockets provide full-duplex communication channels over a single TCP connection between client and server.
 
@@ -48,5 +47,6 @@ socket.send('Hello Server');
 
 ## Interview Questions
 **Q: When would you use WebSockets over HTTP?**
-A: For real-time, bidirectional communication like chat apps, live updates, or collaborative editing.`
+A: For real-time, bidirectional communication like chat apps, live updates, or collaborative editing.
+`
 }; 

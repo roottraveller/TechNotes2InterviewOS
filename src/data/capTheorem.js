@@ -2,8 +2,7 @@ export const capTheorem = {
   id: "cap-theorem",
   title: "CAP Theorem",
   content: `
-    <h2>CAP Theorem</h2>
-    <p>CAP theorem highlights the trade-offs in distributed systems.</p>
+<p>CAP theorem highlights the trade-offs in distributed systems.</p>
 
     <h3>Consistency</h3>
     <p>Consistency means all clients see the same data at the same time no matter which node they connect to.</p>
@@ -25,5 +24,5 @@ export const capTheorem = {
         <li><a href="https://www.scaler.com/topics/cap-theorem-mongodb/" target="_blank">CAP Theorem MongoDB</a></li>
       </ul>
     </div>
-  `
+`
 }; 

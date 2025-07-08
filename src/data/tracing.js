@@ -1,8 +1,7 @@
 export const tracing = {
   id: 'tracing',
   title: 'Distributed Tracing',
-  content: `# Distributed Tracing
-
+  content: `
 ## Definition
 Distributed tracing tracks requests as they flow through multiple services in a distributed system, providing end-to-end visibility.
 
@@ -70,5 +69,6 @@ Distributed tracing tracks requests as they flow through multiple services in a 
 
 ## Interview Questions
 **Q: How does distributed tracing help with microservices debugging?**
-A: It provides end-to-end visibility of request flow across services, helping identify bottlenecks, errors, and dependencies in complex distributed systems.`
+A: It provides end-to-end visibility of request flow across services, helping identify bottlenecks, errors, and dependencies in complex distributed systems.
+`
 }; 

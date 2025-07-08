@@ -2,8 +2,7 @@ export const timestampingProtocol = {
   id: 'timestamping-protocol',
   title: 'Timestamping Protocol',
   content: `
-    <h2>Timestamping Protocol</h2>
-    <p>A concurrency control method that uses timestamps to order transactions and ensure serializability without using locks, thereby avoiding deadlocks.</p>
+<p>A concurrency control method that uses timestamps to order transactions and ensure serializability without using locks, thereby avoiding deadlocks.</p>
     
     <h3>How Timestamping Works</h3>
     <ul>
@@ -146,5 +145,5 @@ Concurrency         | Moderate      | Higher (with MVCC)</code></pre>
         <li><a href="https://en.wikipedia.org/wiki/Timestamp-based_concurrency_control" target="_blank">Timestamp-Based Concurrency Control</a></li>
       </ul>
     </div>
-  `
+`
 }; 

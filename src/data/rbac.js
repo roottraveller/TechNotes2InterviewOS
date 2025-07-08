@@ -2,8 +2,7 @@ export const rbac = {
   id: 'rbac',
   title: 'Role-Based Access Control (RBAC)',
   content: `
-    <h2>Role-Based Access Control (RBAC)</h2>
-    <p>RBAC is a security model that restricts system access to authorized users based on their roles within an organization, providing a structured approach to managing permissions and access rights.</p>
+<p>RBAC is a security model that restricts system access to authorized users based on their roles within an organization, providing a structured approach to managing permissions and access rights.</p>
 
     <h3>Core Components</h3>
     
@@ -436,5 +435,5 @@ CREATE TABLE role_hierarchy (
       <strong>💡 Key Insight:</strong>
       <p>RBAC provides a scalable and manageable approach to access control by organizing permissions around roles. Success depends on thoughtful role design that reflects your organization's structure and security requirements.</p>
     </div>
-  `
+`
 }; 

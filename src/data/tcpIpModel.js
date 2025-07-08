@@ -2,8 +2,7 @@ export const tcpIpModel = {
   id: 'tcp-ip-model',
   title: 'TCP/IP Model',
   content: `
-    <h2>TCP/IP Model</h2>
-    <p>The TCP/IP model is a concise version of the OSI model, containing four layers instead of seven. It was developed by the Department of Defense (DoD) and is the foundation of the modern internet.</p>
+<p>The TCP/IP model is a concise version of the OSI model, containing four layers instead of seven. It was developed by the Department of Defense (DoD) and is the foundation of the modern internet.</p>
 
     <h3>The Four Layers</h3>
     
@@ -216,5 +215,5 @@ Network Access Layer:
       <li><a href="https://www.educative.io/answers/tcp-vs-udp" target="_blank">TCP vs UDP - Educative</a></li>
       <li><a href="https://www.scaler.com/topics/computer-network/tcp-vs-udp/" target="_blank">TCP vs UDP - Scaler</a></li>
     </ul>
-  `
+`
 };

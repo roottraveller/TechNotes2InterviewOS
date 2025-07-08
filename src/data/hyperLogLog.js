@@ -2,8 +2,7 @@ export const hyperLogLog = {
   id: 'hyperloglog',
   title: 'HyperLogLog (HLL)',
   content: `
-    <h2>HyperLogLog (HLL)</h2>
-    <p>HyperLogLog is a probabilistic data structure used for estimating the number of unique elements in very large datasets or data streams with high accuracy and minimal memory usage.</p>
+<p>HyperLogLog is a probabilistic data structure used for estimating the number of unique elements in very large datasets or data streams with high accuracy and minimal memory usage.</p>
 
     <h3>Key Characteristics</h3>
     <ul>
@@ -256,5 +255,5 @@ PFMERGE combined visitors_day1 visitors_day2</code></pre>
       <li><a href="https://stackoverflow.com/a/35219704" target="_blank">HyperLogLog Explained - Stack Overflow</a></li>
       <li><a href="https://www.waitingforcode.com/big-data-algorithms/hyperloglog-explained/read" target="_blank">HyperLogLog Algorithm Explained</a></li>
     </ul>
-  `
+`
 }; 

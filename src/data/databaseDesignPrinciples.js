@@ -2,8 +2,7 @@ export const databaseDesignPrinciples = {
   id: 'database-design-principles',
   title: 'Database Design Principles',
   content: `
-    <h2>Database Design Principles</h2>
-    <p>Fundamental principles that guide effective database design and implementation.</p>
+<p>Fundamental principles that guide effective database design and implementation.</p>
     
     <h3>Core Design Principles</h3>
     <ul>
@@ -35,5 +34,5 @@ export const databaseDesignPrinciples = {
         <li><a href="https://www.scaler.com/topics/dbms/database-design/" target="_blank">Database Design Concepts</a></li>
       </ul>
     </div>
-  `
+`
 }; 

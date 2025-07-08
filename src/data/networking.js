@@ -1,8 +1,7 @@
 export const networking = {
   id: 'networking',
   title: 'Computer Networking',
-  content: `# Computer Networking
-
+  content: `
 ## Definition
 Computer networking is the practice of connecting computers and other devices to share resources and communicate.
 
@@ -30,5 +29,6 @@ Computer networking is the practice of connecting computers and other devices to
 
 ## Interview Questions
 **Q: What's the difference between TCP and UDP?**
-A: TCP is reliable and connection-oriented, while UDP is faster but connectionless and unreliable.`
+A: TCP is reliable and connection-oriented, while UDP is faster but connectionless and unreliable.
+`
 }; 

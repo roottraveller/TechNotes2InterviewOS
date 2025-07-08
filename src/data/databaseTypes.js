@@ -2,8 +2,6 @@ export const databaseTypes = {
   id: 'database-types',
   title: 'Database Types',
   content: `
-# Database Types
-
 Understanding different database types and their optimal use cases is crucial for system design and architecture decisions.
 
 ## Overview

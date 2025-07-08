@@ -1,8 +1,7 @@
 export const docker = {
   id: 'docker',
   title: 'Docker',
-  content: `# Docker
-
+  content: `
 ## Definition
 Docker is a platform that uses containerization technology to package applications and their dependencies into portable containers.
 
@@ -50,5 +49,6 @@ Orchestrate multi-container applications with YAML configuration
 
 ## Interview Questions
 **Q: Explain the difference between COPY and ADD in Dockerfile.**
-A: COPY simply copies files, while ADD can also extract archives and download from URLs.`
+A: COPY simply copies files, while ADD can also extract archives and download from URLs.
+`
 }; 

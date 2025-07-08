@@ -2,8 +2,7 @@ export const compressionDecompression = {
   id: 'compression-decompression',
   title: 'Compression and Decompression',
   content: `
-    <h2>Compression and Decompression</h2>
-    <p>Before serialization, data can be compressed to reduce its size, which can lead to more efficient transmission over the network or storage in files or databases. Compression algorithms reduce data size by identifying and eliminating redundancy.</p>
+<p>Before serialization, data can be compressed to reduce its size, which can lead to more efficient transmission over the network or storage in files or databases. Compression algorithms reduce data size by identifying and eliminating redundancy.</p>
 
     <h3>Core Concepts</h3>
     
@@ -269,5 +268,5 @@ gzip_min_length 1000;</code></pre>
       <li><strong>Backups:</strong> Reduce backup storage costs</li>
       <li><strong>APIs:</strong> Compress JSON/XML responses</li>
     </ul>
-  `
+`
 }; 

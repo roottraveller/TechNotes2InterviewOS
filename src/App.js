@@ -45,7 +45,7 @@ function AppContent() {
 
   return (
     <div className={`app ${isDarkMode ? 'dark-mode' : ''}`}>
-      <Header
+      <Header 
         onHomeClick={handleHomeClick}
         onAboutClick={handleAboutClick}
         onTopicsClick={handleTopicsClick}

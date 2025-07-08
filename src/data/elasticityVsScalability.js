@@ -2,8 +2,7 @@ export const elasticityVsScalability = {
   id: 'elasticity-vs-scalability',
   title: 'Elasticity vs Scalability',
   content: `
-    <h2>Elasticity vs Scalability</h2>
-    <p>While often used interchangeably, elasticity and scalability are distinct concepts in system design. Understanding their differences is crucial for building efficient, cost-effective systems.</p>
+<p>While often used interchangeably, elasticity and scalability are distinct concepts in system design. Understanding their differences is crucial for building efficient, cost-effective systems.</p>
 
     <h3>Scalability</h3>
     <p>Scalability refers to the capability of a system to increase its capacity to handle increased loads. It's about the potential to grow.</p>
@@ -389,5 +388,5 @@ spec:
       <li>5G integration</li>
       <li>IoT scalability</li>
     </ul>
-  `
+`
 }; 

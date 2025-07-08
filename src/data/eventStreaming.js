@@ -1,8 +1,7 @@
 export const eventStreaming = {
   id: 'event-streaming',
   title: 'Event Streaming',
-  content: `# Event Streaming
-
+  content: `
 ## Definition
 Event streaming is the practice of capturing, storing, and processing continuous streams of events in real-time.
 
@@ -59,5 +58,6 @@ Event streaming is the practice of capturing, storing, and processing continuous
 
 ## Interview Questions
 **Q: What's the difference between event streaming and traditional messaging?**
-A: Event streaming focuses on continuous data flows and real-time processing, while traditional messaging is more about discrete message exchange.`
+A: Event streaming focuses on continuous data flows and real-time processing, while traditional messaging is more about discrete message exchange.
+`
 }; 

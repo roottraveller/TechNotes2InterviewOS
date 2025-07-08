@@ -2,8 +2,7 @@ export const baseProperties = {
   id: "base-properties",
   title: "BASE Properties",
   content: `
-    <h2>BASE Properties</h2>
-    <p>BASE principles are often employed in distributed systems and NoSQL databases, prioritizing availability and partition tolerance over strict consistency.</p>
+<p>BASE principles are often employed in distributed systems and NoSQL databases, prioritizing availability and partition tolerance over strict consistency.</p>
 
     <h3>Basically Available</h3>
     <p>Focuses on providing availability over consistency, meaning that the system should remain operational even in the face of failures or network partitions.</p>
@@ -17,5 +16,5 @@ export const baseProperties = {
     <div class="info-note">
       <strong>Note:</strong> BASE properties are the opposite of ACID properties and are commonly used in distributed systems where availability and partition tolerance are prioritized over strict consistency.
     </div>
-  `
+`
 }; 

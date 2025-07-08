@@ -1,8 +1,7 @@
 export const kubernetes = {
   id: 'kubernetes',
   title: 'Kubernetes',
-  content: `# Kubernetes
-
+  content: `
 ## Definition
 Kubernetes is an open-source container orchestration platform that automates deployment, scaling, and management of containerized applications.
 
@@ -47,5 +46,6 @@ Kubernetes is an open-source container orchestration platform that automates dep
 
 ## Interview Questions
 **Q: What is the difference between a Pod and a Container?**
-A: A Pod is the smallest deployable unit in Kubernetes that can contain one or more containers that share storage and network.`
+A: A Pod is the smallest deployable unit in Kubernetes that can contain one or more containers that share storage and network.
+`
 }; 

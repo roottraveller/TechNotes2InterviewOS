@@ -1,8 +1,7 @@
 export const cloudComputing = {
   id: 'cloud-computing',
   title: 'Cloud Computing',
-  content: `# Cloud Computing
-
+  content: `
 ## Definition
 Cloud computing is the delivery of computing services over the internet, providing on-demand access to resources without direct management.
 
@@ -62,5 +61,6 @@ Cloud computing is the delivery of computing services over the internet, providi
 
 ## Interview Questions
 **Q: What's the difference between IaaS, PaaS, and SaaS?**
-A: IaaS provides infrastructure (VMs, storage), PaaS provides development platforms, and SaaS provides complete applications ready to use.`
+A: IaaS provides infrastructure (VMs, storage), PaaS provides development platforms, and SaaS provides complete applications ready to use.
+`
 }; 

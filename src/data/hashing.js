@@ -1,8 +1,7 @@
 export const hashing = {
   id: 'hashing',
   title: 'Hashing',
-  content: `# Hashing
-
+  content: `
 ## Definition
 Hashing is a one-way mathematical function that converts input data of any size into a fixed-size string of characters.
 
@@ -55,5 +54,6 @@ When two different inputs produce the same hash:
 
 ## Interview Questions
 **Q: Why do we salt passwords before hashing?**
-A: To prevent rainbow table attacks and ensure unique hashes even for identical passwords.`
+A: To prevent rainbow table attacks and ensure unique hashes even for identical passwords.
+`
 }; 

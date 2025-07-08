@@ -1,8 +1,7 @@
 export const retryPattern = {
   id: 'retry-pattern',
   title: 'Retry Pattern',
-  content: `# Retry Pattern
-
+  content: `
 ## Definition
 The Retry pattern automatically retries failed operations with configurable delays and limits to handle transient failures.
 
@@ -63,5 +62,6 @@ delay = initial_delay * (multiplier ^ attempt) + jitter
 
 ## Interview Questions
 **Q: Why is jitter important in retry patterns?**
-A: Jitter prevents the thundering herd problem where multiple clients retry simultaneously, potentially overwhelming the recovering service.`
+A: Jitter prevents the thundering herd problem where multiple clients retry simultaneously, potentially overwhelming the recovering service.
+`
 }; 

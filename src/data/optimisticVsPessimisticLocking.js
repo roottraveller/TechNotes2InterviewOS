@@ -2,8 +2,7 @@ export const optimisticVsPessimisticLocking = {
   id: 'optimistic-vs-pessimistic-locking',
   title: 'Optimistic vs Pessimistic Locking',
   content: `
-    <h2>Optimistic vs Pessimistic Locking</h2>
-    <p>Two fundamental approaches to handling concurrent access to shared resources in database systems and distributed applications.</p>
+<p>Two fundamental approaches to handling concurrent access to shared resources in database systems and distributed applications.</p>
     
     <h3>Pessimistic Locking</h3>
     <h4>How it Works</h4>
@@ -122,5 +121,5 @@ IF @@ROWCOUNT = 0
         <li><a href="https://vladmihalcea.com/optimistic-vs-pessimistic-locking/" target="_blank">Optimistic vs Pessimistic Locking</a></li>
       </ul>
     </div>
-  `
+`
 }; 

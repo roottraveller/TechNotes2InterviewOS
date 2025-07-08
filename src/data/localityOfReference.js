@@ -2,8 +2,7 @@ export const localityOfReference = {
   id: 'locality-of-reference',
   title: 'Locality of Reference',
   content: `
-    <h2>Locality of Reference</h2>
-    <p>The principle that programs tend to access data and instructions that are near previously accessed data and instructions, both in time and space. This principle is fundamental to the design of cache systems and memory hierarchies.</p>
+<p>The principle that programs tend to access data and instructions that are near previously accessed data and instructions, both in time and space. This principle is fundamental to the design of cache systems and memory hierarchies.</p>
     
     <h3>Types of Locality</h3>
     
@@ -154,5 +153,5 @@ for (int j = 0; j < cols; j++) {
         <li><a href="https://www.geeksforgeeks.org/locality-of-reference-and-cache-operation-in-cache-memory/" target="_blank">Locality in Cache Memory</a></li>
       </ul>
     </div>
-  `
+`
 }; 

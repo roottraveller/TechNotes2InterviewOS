@@ -2,8 +2,6 @@ export const networkProtocols = {
   id: 'network-protocols',
   title: 'Network Protocols',
   content: `
-# Network Protocols
-
 Network protocols are standardized rules and procedures that govern communication between devices in a network. Understanding these protocols is essential for system design and network architecture.
 
 ## Overview

@@ -1,8 +1,7 @@
 export const http = {
   id: 'http',
   title: 'HTTP (HyperText Transfer Protocol)',
-  content: `# HTTP (HyperText Transfer Protocol)
-
+  content: `
 ## Definition
 HTTP is an application-layer protocol for transmitting hypermedia documents between web servers and clients.
 
@@ -33,5 +32,6 @@ HTTP is an application-layer protocol for transmitting hypermedia documents betw
 
 ## Interview Questions
 **Q: What's the difference between PUT and PATCH?**
-A: PUT replaces the entire resource, while PATCH applies partial modifications.`
+A: PUT replaces the entire resource, while PATCH applies partial modifications.
+`
 }; 

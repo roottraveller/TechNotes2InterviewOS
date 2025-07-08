@@ -1,8 +1,7 @@
 export const apiGateway = {
   id: 'api-gateway',
   title: 'API Gateway',
-  content: `# API Gateway
-
+  content: `
 ## Definition
 An API Gateway is a server that acts as a single entry point for multiple backend services, handling routing, authentication, and other cross-cutting concerns.
 
@@ -54,5 +53,6 @@ An API Gateway is a server that acts as a single entry point for multiple backen
 
 ## Interview Questions
 **Q: What problems does an API Gateway solve?**
-A: Centralized routing, authentication, rate limiting, and monitoring while providing a single entry point for multiple backend services.`
+A: Centralized routing, authentication, rate limiting, and monitoring while providing a single entry point for multiple backend services.
+`
 }; 

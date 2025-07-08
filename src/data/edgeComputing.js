@@ -1,8 +1,7 @@
 export const edgeComputing = {
   id: 'edge-computing',
   title: 'Edge Computing',
-  content: `# Edge Computing
-
+  content: `
 ## Definition
 Edge computing brings computation and data storage closer to the sources of data, reducing latency and bandwidth usage.
 
@@ -68,5 +67,6 @@ Edge computing brings computation and data storage closer to the sources of data
 
 ## Interview Questions
 **Q: How does edge computing differ from cloud computing?**
-A: Edge computing processes data closer to where it's generated for lower latency, while cloud computing centralizes processing in remote data centers.`
+A: Edge computing processes data closer to where it's generated for lower latency, while cloud computing centralizes processing in remote data centers.
+`
 }; 

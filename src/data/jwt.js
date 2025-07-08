@@ -1,8 +1,7 @@
 export const jwt = {
   id: 'jwt',
   title: 'JWT (JSON Web Token)',
-  content: `# JWT (JSON Web Token)
-
+  content: `
 ## Definition
 JWT is a compact, URL-safe token format for securely transmitting information between parties as a JSON object.
 
@@ -58,5 +57,6 @@ eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4
 
 ## Interview Questions
 **Q: What are the security risks of using JWT?**
-A: Token theft, no server-side revocation, payload visibility, and potential for replay attacks if not properly secured.`
+A: Token theft, no server-side revocation, payload visibility, and potential for replay attacks if not properly secured.
+`
 }; 

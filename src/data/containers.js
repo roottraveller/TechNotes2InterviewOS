@@ -1,8 +1,7 @@
 export const containers = {
   id: 'containers',
   title: 'Containers',
-  content: `# Containers
-
+  content: `
 ## Definition
 Containers are lightweight, portable units that package applications and their dependencies together for consistent deployment across environments.
 
@@ -51,5 +50,6 @@ CMD ["npm", "start"]
 
 ## Interview Questions
 **Q: What are the advantages of containers over virtual machines?**
-A: Containers are more lightweight, start faster, and provide better resource utilization while maintaining application isolation.`
+A: Containers are more lightweight, start faster, and provide better resource utilization while maintaining application isolation.
+`
 }; 

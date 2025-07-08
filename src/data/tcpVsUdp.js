@@ -2,8 +2,7 @@ export const tcpVsUdp = {
   id: 'tcp-vs-udp',
   title: 'TCP vs UDP',
   content: `
-    <h2>TCP vs UDP</h2>
-    <p>TCP (Transmission Control Protocol) and UDP (User Datagram Protocol) are the two main transport layer protocols in the Internet Protocol suite. They serve different purposes and have distinct characteristics.</p>
+<p>TCP (Transmission Control Protocol) and UDP (User Datagram Protocol) are the two main transport layer protocols in the Internet Protocol suite. They serve different purposes and have distinct characteristics.</p>
 
     <h3>TCP (Transmission Control Protocol)</h3>
     <p>TCP is a connection-oriented, reliable protocol that ensures data delivery through acknowledgments and retransmissions. It provides ordered, error-checked delivery of data between applications.</p>
@@ -230,5 +229,5 @@ Connection terminated</code></pre>
       <li><a href="https://www.educative.io/answers/tcp-vs-udp" target="_blank">TCP vs UDP - Educative</a></li>
       <li><a href="https://www.scaler.com/topics/computer-network/tcp-vs-udp/" target="_blank">TCP vs UDP - Scaler</a></li>
     </ul>
-  `
+`
 }; 

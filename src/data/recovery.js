@@ -1,8 +1,7 @@
 export const recovery = {
   id: 'recovery',
   title: 'Database Recovery',
-  content: `# Database Recovery
-
+  content: `
 ## Definition
 Database recovery is the process of restoring a database to a correct state after a failure or corruption.
 
@@ -32,5 +31,6 @@ Database recovery is the process of restoring a database to a correct state afte
 
 ## Interview Questions
 **Q: What is Write-Ahead Logging?**
-A: A technique where all changes are first written to a log before being applied to the database.`
+A: A technique where all changes are first written to a log before being applied to the database.
+`
 }; 

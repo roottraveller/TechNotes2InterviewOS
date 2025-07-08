@@ -1,8 +1,7 @@
 export const bulkhead = {
   id: 'bulkhead',
   title: 'Bulkhead Pattern',
-  content: `# Bulkhead Pattern
-
+  content: `
 ## Definition
 The Bulkhead pattern isolates critical resources to prevent failures in one part of the system from affecting other parts.
 
@@ -60,5 +59,6 @@ Named after ship bulkheads that prevent water from flooding the entire ship if o
 
 ## Interview Questions
 **Q: When would you use the Bulkhead pattern?**
-A: When you need to isolate critical resources to prevent failures in one area from affecting the entire system, especially in high-availability applications.`
+A: When you need to isolate critical resources to prevent failures in one area from affecting the entire system, especially in high-availability applications.
+`
 }; 

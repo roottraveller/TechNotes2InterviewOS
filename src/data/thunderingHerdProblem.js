@@ -2,8 +2,7 @@ export const thunderingHerdProblem = {
   id: 'thundering-herd-problem',
   title: 'Thundering Herd Problem',
   content: `
-    <h2>Thundering Herd Problem</h2>
-    <p>The thundering herd problem occurs when multiple processes or threads simultaneously wake up or activate to handle an event, but only one can actually process it, leading to wasted resources and potential system overload.</p>
+<p>The thundering herd problem occurs when multiple processes or threads simultaneously wake up or activate to handle an event, but only one can actually process it, leading to wasted resources and potential system overload.</p>
     
     <h3>What is Thundering Herd?</h3>
     <ul>
@@ -296,5 +295,5 @@ public class ThunderingHerdMonitor {
         <li><a href="https://instagram-engineering.com/thundering-herds-promises-82191c8af57d" target="_blank">Instagram Engineering - Thundering Herds & Promises</a></li>
       </ul>
     </div>
-  `
+`
 }; 

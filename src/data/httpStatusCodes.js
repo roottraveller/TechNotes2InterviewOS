@@ -2,8 +2,7 @@ export const httpStatusCodes = {
   id: 'http-status-codes',
   title: 'HTTP Status Codes',
   content: `
-    <h2>HTTP Status Codes</h2>
-    <p>HTTP status codes are three-digit numbers returned by servers to indicate the result of a client's request. They are grouped into five categories based on the first digit.</p>
+<p>HTTP status codes are three-digit numbers returned by servers to indicate the result of a client's request. They are grouped into five categories based on the first digit.</p>
 
     <h3>Status Code Categories</h3>
     
@@ -231,5 +230,5 @@ Retry-After: 3600</code></pre>
     <ul>
       <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status" target="_blank">HTTP Status Codes - MDN</a></li>
     </ul>
-  `
+`
 }; 

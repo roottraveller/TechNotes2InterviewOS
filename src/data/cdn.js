@@ -1,8 +1,7 @@
 export const cdn = {
   id: 'cdn',
   title: 'CDN (Content Delivery Network)',
-  content: `# CDN (Content Delivery Network)
-
+  content: `
 ## Definition
 A CDN is a distributed network of servers that deliver web content to users based on their geographic location.
 
@@ -38,5 +37,6 @@ A CDN is a distributed network of servers that deliver web content to users base
 
 ## Interview Questions
 **Q: How does a CDN improve website performance?**
-A: By serving content from geographically closer servers, reducing latency and load times.`
+A: By serving content from geographically closer servers, reducing latency and load times.
+`
 }; 

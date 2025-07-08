@@ -2,8 +2,7 @@ export const httpHeaders = {
   id: 'http-headers',
   title: 'HTTP Headers',
   content: `
-    <h2>HTTP Headers</h2>
-    <p>HTTP headers are key-value pairs sent between client and server that provide essential information about the request or response. They control caching, authentication, content negotiation, and many other aspects of HTTP communication.</p>
+<p>HTTP headers are key-value pairs sent between client and server that provide essential information about the request or response. They control caching, authentication, content negotiation, and many other aspects of HTTP communication.</p>
 
     <h3>ETag (Entity Tag) HTTP Header</h3>
     <p>ETag header is used by web servers and browsers to determine whether a resource (e.g., web pages, images, CSS files) has changed since it was last requested or cached.</p>
@@ -187,5 +186,5 @@ X-RateLimit-Reset: 1684882734</code></pre>
       <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/ETag" target="_blank">ETag - MDN</a></li>
       <li><a href="https://www.educative.io/answers/what-is-an-etag-in-http" target="_blank">What is an ETag in HTTP - Educative</a></li>
     </ul>
-  `
+`
 }; 

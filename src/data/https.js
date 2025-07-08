@@ -1,8 +1,7 @@
 export const https = {
   id: 'https',
   title: 'HTTPS (HTTP Secure)',
-  content: `# HTTPS (HTTP Secure)
-
+  content: `
 ## Definition
 HTTPS is HTTP over TLS/SSL, providing encrypted communication between web browsers and servers.
 
@@ -37,5 +36,6 @@ HTTPS is HTTP over TLS/SSL, providing encrypted communication between web browse
 
 ## Interview Questions
 **Q: What happens during the TLS handshake?**
-A: Client and server negotiate encryption parameters, exchange certificates, and establish a secure connection.`
+A: Client and server negotiate encryption parameters, exchange certificates, and establish a secure connection.
+`
 }; 

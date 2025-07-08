@@ -1,8 +1,7 @@
 export const circuitBreaker = {
   id: 'circuit-breaker',
   title: 'Circuit Breaker Pattern',
-  content: `# Circuit Breaker Pattern
-
+  content: `
 ## Definition
 The Circuit Breaker pattern prevents cascading failures in distributed systems by monitoring service calls and stopping requests when failures exceed a threshold.
 
@@ -55,5 +54,6 @@ The Circuit Breaker pattern prevents cascading failures in distributed systems b
 
 ## Interview Questions
 **Q: How does a circuit breaker prevent cascading failures?**
-A: By failing fast when a service is down, preventing resource exhaustion and allowing the system to maintain stability while the failing service recovers.`
+A: By failing fast when a service is down, preventing resource exhaustion and allowing the system to maintain stability while the failing service recovers.
+`
 }; 

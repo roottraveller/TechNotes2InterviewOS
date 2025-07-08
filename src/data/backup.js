@@ -1,8 +1,7 @@
 export const backup = {
   id: 'backup',
   title: 'Database Backup',
-  content: `# Database Backup
-
+  content: `
 ## Definition
 Database backup is the process of creating copies of database data to protect against data loss and enable recovery.
 
@@ -31,5 +30,6 @@ Database backup is the process of creating copies of database data to protect ag
 
 ## Interview Questions
 **Q: What's the difference between hot and cold backups?**
-A: Hot backups occur while the database is online and accessible, while cold backups require the database to be offline.`
+A: Hot backups occur while the database is online and accessible, while cold backups require the database to be offline.
+`
 }; 

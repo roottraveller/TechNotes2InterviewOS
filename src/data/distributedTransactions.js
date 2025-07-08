@@ -2,8 +2,7 @@ export const distributedTransactions = {
   id: 'distributed-transactions',
   title: 'Distributed Transactions',
   content: `
-    <h2>Distributed Transactions</h2>
-    <p>Distributed transactions are transactions that span multiple databases, systems, or resources across a network, requiring coordination to ensure ACID properties are maintained across all participating systems.</p>
+<p>Distributed transactions are transactions that span multiple databases, systems, or resources across a network, requiring coordination to ensure ACID properties are maintained across all participating systems.</p>
     
     <h3>What are Distributed Transactions?</h3>
     <ul>
@@ -320,5 +319,5 @@ public class TransactionMonitor {
         <li><a href="https://microservices.io/patterns/data/saga.html" target="_blank">Saga Pattern</a></li>
       </ul>
     </div>
-  `
+`
 }; 

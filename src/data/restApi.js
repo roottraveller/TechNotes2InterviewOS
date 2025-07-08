@@ -1,7 +1,8 @@
 export const restApi = {
   id: 'rest-api',
   title: 'REST API',
-  content: `# REST API (Representational State Transfer)
+  content: `
+(Representational State Transfer)
 
 ## Definition
 REST is an architectural style for designing networked applications using stateless communication and standard HTTP methods.
@@ -45,5 +46,6 @@ REST is an architectural style for designing networked applications using statel
 
 ## Interview Questions
 **Q: What makes an API RESTful?**
-A: Following REST principles: stateless, uniform interface, resource-based URLs, and proper HTTP methods.`
+A: Following REST principles: stateless, uniform interface, resource-based URLs, and proper HTTP methods.
+`
 }; 

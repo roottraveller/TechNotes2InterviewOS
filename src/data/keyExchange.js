@@ -2,8 +2,7 @@ export const keyExchange = {
   id: 'key-exchange',
   title: 'Key Exchange Algorithms',
   content: `
-    <h2>Key Exchange Algorithms</h2>
-    <p>Key exchange is the process by which cryptographic keys (private key) are securely exchanged between parties to enable secure communication and establish a shared secret key for encryption and decryption over an insecure communication channel.</p>
+<p>Key exchange is the process by which cryptographic keys (private key) are securely exchanged between parties to enable secure communication and establish a shared secret key for encryption and decryption over an insecure communication channel.</p>
 
     <h3>Diffie-Hellman Key Exchange</h3>
     <ul>
@@ -105,5 +104,5 @@ export const keyExchange = {
     <ul>
       <li><a href="https://www.vskills.in/certification/tutorial/private-and-public-key-exchange-3/" target="_blank">Private and Public Key Exchange</a></li>
     </ul>
-  `
+`
 }; 

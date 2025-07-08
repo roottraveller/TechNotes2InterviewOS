@@ -2,8 +2,7 @@ export const encryptionDecryption = {
   id: 'encryption-decryption',
   title: 'Encryption and Decryption',
   content: `
-    <h2>Encryption and Decryption</h2>
-    <p>To ensure data security during transmission or storage, encryption can be applied either before or after serialization. Encryption scrambles the data using a cryptographic algorithm and a key, making it unreadable to unauthorized parties. When encrypted data is received or retrieved, it needs to be decrypted before deserialization to restore it to its original form. Decryption requires the appropriate cryptographic key and algorithm to reverse the encryption process.</p>
+<p>To ensure data security during transmission or storage, encryption can be applied either before or after serialization. Encryption scrambles the data using a cryptographic algorithm and a key, making it unreadable to unauthorized parties. When encrypted data is received or retrieved, it needs to be decrypted before deserialization to restore it to its original form. Decryption requires the appropriate cryptographic key and algorithm to reverse the encryption process.</p>
 
     <h3>Types of Encryption</h3>
     
@@ -273,5 +272,5 @@ const match = await bcrypt.compare(password, hash);</code></pre>
       <li><strong>Post-Quantum:</strong> New algorithms being developed</li>
       <li><strong>Hybrid Approach:</strong> Combine classical and post-quantum</li>
     </ul>
-  `
+`
 }; 

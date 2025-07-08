@@ -1,8 +1,7 @@
 export const serverless = {
   id: 'serverless',
   title: 'Serverless Computing',
-  content: `# Serverless Computing
-
+  content: `
 ## Definition
 Serverless computing is a cloud execution model where the cloud provider manages server infrastructure, automatically scaling and charging only for actual usage.
 
@@ -74,5 +73,6 @@ Serverless computing is a cloud execution model where the cloud provider manages
 
 ## Interview Questions
 **Q: What is a cold start in serverless computing?**
-A: Cold start is the initial latency when a function is invoked for the first time or after being idle, as the provider needs to initialize the runtime environment.`
+A: Cold start is the initial latency when a function is invoked for the first time or after being idle, as the provider needs to initialize the runtime environment.
+`
 }; 

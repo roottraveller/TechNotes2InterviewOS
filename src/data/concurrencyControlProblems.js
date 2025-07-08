@@ -2,8 +2,7 @@ export const concurrencyControlProblems = {
   id: 'concurrency-control-problems',
   title: 'Concurrency Control Problems in Database',
   content: `
-    <h2>Concurrency Control Problems in Database</h2>
-    <p>When multiple transactions execute concurrently in a database, various problems can arise that compromise data integrity and consistency. Understanding these problems is crucial for designing robust database systems.</p>
+<p>When multiple transactions execute concurrently in a database, various problems can arise that compromise data integrity and consistency. Understanding these problems is crucial for designing robust database systems.</p>
 
     <h3>1. Dirty Read</h3>
     <p>A transaction (T1) modifies data, and Transaction (T2) reads this data before T1 commits its changes to the database. If T1 rolls back its changes later, T2 will have read data that was never actually committed to the database.</p>
@@ -190,5 +189,5 @@ t6                                  COMMIT
     <ul>
       <li><a href="https://www.scaler.com/topics/dbms/concurrency-control-in-dbms/" target="_blank">Concurrency Control in DBMS - Scaler</a></li>
     </ul>
-  `
+`
 }; 

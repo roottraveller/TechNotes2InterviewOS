@@ -2,8 +2,7 @@ export const monitoringObservability = {
   id: 'monitoring-observability',
   title: 'Monitoring and Observability',
   content: `
-    <h2>Monitoring and Observability</h2>
-    <p>Monitoring and observability are critical for maintaining healthy, reliable systems. While monitoring tells you when something is wrong, observability helps you understand why it's wrong and how to fix it.</p>
+<p>Monitoring and observability are critical for maintaining healthy, reliable systems. While monitoring tells you when something is wrong, observability helps you understand why it's wrong and how to fix it.</p>
 
     <h3>Monitoring vs Observability</h3>
     
@@ -395,5 +394,5 @@ app.use((req, res, next) => {
       <li><strong>Impact assessment:</strong> Affected users/services</li>
       <li><strong>Prevention:</strong> Add monitoring for gaps</li>
     </ul>
-  `
+`
 }; 

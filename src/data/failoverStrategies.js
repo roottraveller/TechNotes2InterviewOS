@@ -2,8 +2,7 @@ export const failoverStrategies = {
   id: 'failover-strategies',
   title: 'Failover Strategies',
   content: `
-    <h2>Failover Strategies</h2>
-    <p>Failover is the process of switching to a redundant or standby system, server, or network upon the failure or abnormal termination of the currently active system. It's a critical component of high availability and disaster recovery planning.</p>
+<p>Failover is the process of switching to a redundant or standby system, server, or network upon the failure or abnormal termination of the currently active system. It's a critical component of high availability and disaster recovery planning.</p>
 
     <h3>Types of Failover</h3>
     
@@ -540,5 +539,5 @@ alerts:
         </tr>
       </tbody>
     </table>
-  `
+`
 }; 

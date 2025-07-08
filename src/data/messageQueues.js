@@ -1,8 +1,7 @@
 export const messageQueues = {
   id: 'message-queues',
   title: 'Message Queues',
-  content: `# Message Queues
-
+  content: `
 ## Definition
 Message queues are communication mechanisms that allow applications to exchange messages asynchronously through a queue data structure.
 
@@ -46,5 +45,6 @@ Message queues are communication mechanisms that allow applications to exchange 
 
 ## Interview Questions
 **Q: What's the difference between message queues and databases?**
-A: Message queues are designed for temporary message passing and consumption, while databases store persistent data for retrieval.`
+A: Message queues are designed for temporary message passing and consumption, while databases store persistent data for retrieval.
+`
 }; 

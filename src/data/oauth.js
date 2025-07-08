@@ -1,8 +1,7 @@
 export const oauth = {
   id: 'oauth',
   title: 'OAuth 2.0',
-  content: `# OAuth 2.0
-
+  content: `
 ## Definition
 OAuth 2.0 is an authorization framework that enables applications to obtain limited access to user accounts on behalf of the user.
 
@@ -55,5 +54,6 @@ Extension of OAuth 2.0 for authentication, adds ID tokens
 
 ## Interview Questions
 **Q: What's the difference between OAuth and OpenID Connect?**
-A: OAuth is for authorization (what you can do), while OpenID Connect adds authentication (who you are) on top of OAuth.`
+A: OAuth is for authorization (what you can do), while OpenID Connect adds authentication (who you are) on top of OAuth.
+`
 }; 

@@ -1,8 +1,7 @@
 export const timeoutPattern = {
   id: 'timeout-pattern',
   title: 'Timeout Pattern',
-  content: `# Timeout Pattern
-
+  content: `
 ## Definition
 The Timeout pattern sets a maximum time limit for operations to complete, preventing indefinite blocking and resource exhaustion.
 
@@ -66,5 +65,6 @@ The Timeout pattern sets a maximum time limit for operations to complete, preven
 
 ## Interview Questions
 **Q: How do you determine appropriate timeout values?**
-A: Consider operation complexity, network conditions, user expectations, and system capacity while monitoring actual performance patterns.`
+A: Consider operation complexity, network conditions, user expectations, and system capacity while monitoring actual performance patterns.
+`
 }; 

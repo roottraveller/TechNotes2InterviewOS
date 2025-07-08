@@ -1,8 +1,7 @@
 export const sql = {
   id: 'sql',
   title: 'SQL (Structured Query Language)',
-  content: `# SQL (Structured Query Language)
-
+  content: `
 ## Definition
 SQL is a standardized language for managing and manipulating relational databases.
 
@@ -37,5 +36,6 @@ ORDER BY column1;
 A: INNER JOIN returns only matching records from both tables, while LEFT JOIN returns all records from the left table and matching records from the right table.
 
 **Q: What is a SQL injection attack?**
-A: A security vulnerability where malicious SQL code is inserted into application queries to manipulate the database.`
+A: A security vulnerability where malicious SQL code is inserted into application queries to manipulate the database.
+`
 }; 

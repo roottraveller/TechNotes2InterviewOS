@@ -1,8 +1,7 @@
 export const tcp = {
   id: 'tcp',
   title: 'TCP (Transmission Control Protocol)',
-  content: `# TCP (Transmission Control Protocol)
-
+  content: `
 ## Definition
 TCP is a reliable, connection-oriented protocol that ensures data is delivered accurately and in order.
 
@@ -33,5 +32,6 @@ TCP is a reliable, connection-oriented protocol that ensures data is delivered a
 
 ## Interview Questions
 **Q: Explain the TCP three-way handshake.**
-A: SYN from client, SYN-ACK from server, ACK from client to establish connection.`
+A: SYN from client, SYN-ACK from server, ACK from client to establish connection.
+`
 }; 

@@ -2,8 +2,7 @@ export const forwardProxy = {
   id: 'forward-proxy',
   title: 'Forward Proxy',
   content: `
-    <h2>Forward Proxy</h2>
-    <p>A forward proxy, often simply called a "proxy," is an intermediary server that sits between client computers and the internet. It acts on behalf of clients, forwarding their requests to web servers and returning the responses. The forward proxy hides the client's identity from the destination server.</p>
+<p>A forward proxy, often simply called a "proxy," is an intermediary server that sits between client computers and the internet. It acts on behalf of clients, forwarding their requests to web servers and returning the responses. The forward proxy hides the client's identity from the destination server.</p>
 
     <h3>How Forward Proxy Works</h3>
     
@@ -612,5 +611,5 @@ class CachingProxy {
       <li><strong>Issue:</strong> Certificate warnings with SSL interception</li>
       <li><strong>Solution:</strong> Properly deploy CA certificates, use certificate pinning exceptions</li>
     </ul>
-  `
+`
 }; 

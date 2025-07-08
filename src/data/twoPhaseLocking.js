@@ -2,8 +2,7 @@ export const twoPhaseLocking = {
   id: 'two-phase-locking',
   title: 'Two-Phase Locking (2PL)',
   content: `
-    <h2>Two-Phase Locking (2PL)</h2>
-    <p>A concurrency control protocol that ensures serializability by dividing each transaction into two distinct phases: a growing phase where locks are acquired, and a shrinking phase where locks are released.</p>
+<p>A concurrency control protocol that ensures serializability by dividing each transaction into two distinct phases: a growing phase where locks are acquired, and a shrinking phase where locks are released.</p>
     
     <h3>The Two Phases</h3>
     
@@ -131,5 +130,5 @@ Shrinking Phase:
         <li><a href="https://en.wikipedia.org/wiki/Two-phase_locking" target="_blank">Two-Phase Locking - Wikipedia</a></li>
       </ul>
     </div>
-  `
+`
 }; 

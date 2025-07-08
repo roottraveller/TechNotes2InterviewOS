@@ -2,8 +2,7 @@ export const vectorClocks = {
   id: 'vector-clocks',
   title: 'Vector Clocks',
   content: `
-    <h2>Vector Clocks</h2>
-    <p>Vector clocks are a mechanism for generating a partial ordering of events in a distributed system and detecting causality violations. They provide a way to determine the causal relationship between events across different processes.</p>
+<p>Vector clocks are a mechanism for generating a partial ordering of events in a distributed system and detecting causality violations. They provide a way to determine the causal relationship between events across different processes.</p>
     
     <h3>What are Vector Clocks?</h3>
     <ul>
@@ -454,5 +453,5 @@ public class BoundedVectorClock {
         <li><a href="https://www.cs.rutgers.edu/~pxk/417/notes/clocks/index.html" target="_blank">Logical Clocks in Distributed Systems</a></li>
       </ul>
     </div>
-  `
+`
 }; 

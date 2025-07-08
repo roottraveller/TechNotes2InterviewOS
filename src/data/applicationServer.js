@@ -1,8 +1,7 @@
 export const applicationServer = {
   id: 'application-server',
   title: 'Application Server',
-  content: `# Application Server
-
+  content: `
 ## Definition
 An application server is a server that hosts and executes applications, providing business logic and dynamic content generation.
 
@@ -30,5 +29,6 @@ An application server is a server that hosts and executes applications, providin
 A: Web servers serve static content and handle HTTP requests, while application servers execute business logic and provide enterprise services.
 
 **Q: What are the benefits of using an application server?**
-A: Centralized business logic, transaction management, security, scalability, and enterprise integration capabilities.`
+A: Centralized business logic, transaction management, security, scalability, and enterprise integration capabilities.
+`
 }; 

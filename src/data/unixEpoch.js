@@ -2,8 +2,7 @@ export const unixEpoch = {
   id: 'unix-epoch',
   title: 'Unix Epoch',
   content: `
-    <h2>Unix Epoch</h2>
-    <p>The Unix epoch is the starting point for Unix time measurement, representing <strong>00:00:00 Coordinated Universal Time (UTC) on 1 January 1970</strong>. It serves as the foundation for time representation in most computer systems and is crucial for system design interviews.</p>
+<p>The Unix epoch is the starting point for Unix time measurement, representing <strong>00:00:00 Coordinated Universal Time (UTC) on 1 January 1970</strong>. It serves as the foundation for time representation in most computer systems and is crucial for system design interviews.</p>
     
     <h3>Key Definitions</h3>
     <ul>
@@ -195,5 +194,5 @@ System.out.println(dateTime); // 2023-11-14T22:13:20</code></pre>
         <li><a href="https://en.wikipedia.org/wiki/Year_2038_problem" target="_blank">Year 2038 Problem - Wikipedia</a></li>
       </ul>
     </div>
-  `
+`
 }; 

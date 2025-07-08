@@ -1,8 +1,7 @@
 export const microservices = {
   id: 'microservices',
   title: 'Microservices Architecture',
-  content: `# Microservices Architecture
-
+  content: `
 ## Definition
 Microservices is an architectural pattern that structures an application as a collection of small, autonomous services.
 
@@ -40,5 +39,6 @@ Microservices is an architectural pattern that structures an application as a co
 
 ## Interview Questions
 **Q: What are the main challenges of microservices?**
-A: Distributed system complexity, network latency, data consistency, and monitoring difficulties.`
+A: Distributed system complexity, network latency, data consistency, and monitoring difficulties.
+`
 }; 

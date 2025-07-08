@@ -2,8 +2,7 @@ export const thunderingHerd = {
   id: 'thundering-herd-problem',
   title: 'Thundering Herd Problem',
   content: `
-    <h2>Thundering Herd Problem</h2>
-    <p>The Thundering Herd Problem can occur in distributed systems when multiple clients or processes simultaneously request the same resource that has recently become available or has been updated. This simultaneous surge of requests can overwhelm the system, leading to increased latency, resource contention, and potentially system instability.</p>
+<p>The Thundering Herd Problem can occur in distributed systems when multiple clients or processes simultaneously request the same resource that has recently become available or has been updated. This simultaneous surge of requests can overwhelm the system, leading to increased latency, resource contention, and potentially system instability.</p>
 
     <h3>What is Thundering Herd?</h3>
     <p><strong>Thundering Herd means a sudden surge of activity or requests directed at a resource or a system.</strong></p>
@@ -165,5 +164,5 @@ class ProbabilisticCache:
       <li><strong>Retry Storms:</strong> Cascading retries causing additional load</li>
       <li><strong>Cold Start Problem:</strong> Related issue when systems start without warm caches</li>
     </ul>
-  `
+`
 }; 

@@ -2,8 +2,7 @@ export const apiDesign = {
   id: 'api-design',
   title: 'API Design Principles',
   content: `
-    <h2>API Design Principles</h2>
-    <p>API (Application Programming Interface) design is crucial for building maintainable, scalable, and user-friendly systems that enable effective communication between different software components.</p>
+<p>API (Application Programming Interface) design is crucial for building maintainable, scalable, and user-friendly systems that enable effective communication between different software components.</p>
 
     <h3>REST API Design Principles</h3>
     
@@ -373,5 +372,5 @@ paths:
       <strong>💡 Key Insight:</strong>
       <p>Good API design is about creating interfaces that are intuitive, consistent, and maintainable. Focus on the developer experience and design APIs that you would want to use yourself.</p>
     </div>
-  `
+`
 }; 

@@ -2,8 +2,7 @@ export const raftConsensus = {
   id: 'raft-consensus',
   title: 'Raft Consensus Algorithm',
   content: `
-    <h2>Raft Consensus Algorithm</h2>
-    <p>Raft is a consensus algorithm designed to be more understandable than Paxos while providing the same guarantees. It's used to manage a replicated log across multiple servers.</p>
+<p>Raft is a consensus algorithm designed to be more understandable than Paxos while providing the same guarantees. It's used to manage a replicated log across multiple servers.</p>
     
     <h3>Key Design Goals</h3>
     <ul>
@@ -91,5 +90,5 @@ export const raftConsensus = {
         <li><a href="https://thesecretlivesofdata.com/raft/" target="_blank">Raft Visualization</a></li>
       </ul>
     </div>
-  `
+`
 }; 

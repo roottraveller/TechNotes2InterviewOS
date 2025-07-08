@@ -2,8 +2,7 @@ export const cacheStrategies = {
   id: 'cache-strategies',
   title: 'Cache Strategies',
   content: `
-    <h2>Cache Strategies</h2>
-    <p>Cache strategies define how data is read from and written to cache in relation to the underlying data store. Choosing the right caching strategy is crucial for optimizing application performance and maintaining data consistency.</p>
+<p>Cache strategies define how data is read from and written to cache in relation to the underlying data store. Choosing the right caching strategy is crucial for optimizing application performance and maintaining data consistency.</p>
 
     <h3>Reading Data from Cache</h3>
     
@@ -269,5 +268,5 @@ class WriteBehindCache:
       <li><a href="https://codeahoy.com/2017/08/11/caching-strategies-and-how-to-choose-the-right-one/" target="_blank">Caching Strategies and How to Choose the Right One</a></li>
       <li><a href="https://blog.bytebytego.com/p/top-caching-strategies" target="_blank">Top Caching Strategies - ByteByteGo</a></li>
     </ul>
-  `
+`
 }; 

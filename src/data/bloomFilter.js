@@ -2,8 +2,7 @@ export const bloomFilter = {
   id: 'bloom-filter',
   title: 'Bloom Filter',
   content: `
-    <h2>Bloom Filter</h2>
-    <p>A Bloom filter is a space-efficient probabilistic data structure designed to test whether an element is a member of a set. It can have false positives but never false negatives, making it useful for applications where approximate membership testing is acceptable.</p>
+<p>A Bloom filter is a space-efficient probabilistic data structure designed to test whether an element is a member of a set. It can have false positives but never false negatives, making it useful for applications where approximate membership testing is acceptable.</p>
     
     <h3>What is a Bloom Filter?</h3>
     <ul>
@@ -562,5 +561,5 @@ public class BloomFilterAnalysis {
         <li><a href="https://brilliant.org/wiki/bloom-filter/" target="_blank">Bloom Filters - Brilliant</a></li>
       </ul>
     </div>
-  `
+`
 }; 

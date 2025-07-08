@@ -1,8 +1,7 @@
 export const graphql = {
   id: 'graphql',
   title: 'GraphQL',
-  content: `# GraphQL
-
+  content: `
 ## Definition
 GraphQL is a query language and runtime for APIs that allows clients to request exactly the data they need.
 
@@ -55,5 +54,6 @@ query {
 
 ## Interview Questions
 **Q: What are the main advantages of GraphQL over REST?**
-A: Precise data fetching, single endpoint, strong typing, and better client-server communication.`
+A: Precise data fetching, single endpoint, strong typing, and better client-server communication.
+`
 }; 

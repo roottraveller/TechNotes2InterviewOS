@@ -2,8 +2,7 @@ export const eventSourcing = {
   id: 'event-sourcing',
   title: 'Event Sourcing',
   content: `
-    <h2>Event Sourcing</h2>
-    <p>Event Sourcing is an architectural pattern where application state is stored as a sequence of events rather than storing just the current state. Each state change is captured as an immutable event.</p>
+<p>Event Sourcing is an architectural pattern where application state is stored as a sequence of events rather than storing just the current state. Each state change is captured as an immutable event.</p>
 
     <h3>Core Concepts</h3>
     
@@ -497,5 +496,5 @@ demonstrateEventSourcing().catch(console.error);</code></pre>
       <strong>💡 Key Insight:</strong>
       <p>Event Sourcing provides powerful capabilities for audit trails and analytics, but comes with significant complexity. It's best suited for domains where the benefits clearly outweigh the implementation costs.</p>
     </div>
-  `
+`
 }; 

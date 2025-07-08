@@ -1,8 +1,7 @@
 export const authorization = {
   id: 'authorization',
   title: 'Authorization',
-  content: `# Authorization
-
+  content: `
 ## Definition
 Authorization is the process of determining what actions or resources an authenticated user is permitted to access.
 
@@ -52,5 +51,6 @@ Include authorization information in tokens
 
 ## Interview Questions
 **Q: Explain the difference between RBAC and ABAC.**
-A: RBAC uses predefined roles, while ABAC makes dynamic decisions based on user, resource, and environmental attributes.`
+A: RBAC uses predefined roles, while ABAC makes dynamic decisions based on user, resource, and environmental attributes.
+`
 }; 

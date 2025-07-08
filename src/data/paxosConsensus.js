@@ -2,8 +2,7 @@ export const paxosConsensus = {
   id: 'paxos-consensus',
   title: 'Paxos Consensus Algorithm',
   content: `
-    <h2>Paxos Consensus Algorithm</h2>
-    <p>Paxos is a family of protocols for solving consensus in a network of unreliable processors, designed to work even when nodes fail or messages are lost.</p>
+<p>Paxos is a family of protocols for solving consensus in a network of unreliable processors, designed to work even when nodes fail or messages are lost.</p>
     
     <h3>Three-Phase Protocol</h3>
     
@@ -64,5 +63,5 @@ export const paxosConsensus = {
         <li><a href="https://medium.com/designing-distributed-systems/flexible-paxos-relaxing-the-quorum-constraint-89caec294083" target="_blank">Flexible Paxos</a></li>
       </ul>
     </div>
-  `
+`
 }; 

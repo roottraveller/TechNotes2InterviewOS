@@ -2,8 +2,7 @@ export const encodingDecoding = {
   id: 'encoding-decoding',
   title: 'Encoding and Decoding',
   content: `
-    <h2>Encoding and Decoding</h2>
-    <p>Encoding is used to represent data in a specific format that is suitable for a particular purpose, such as storage, transmission, or presentation. Encoding and Decoding are similar concepts to serialization and deserialization. However, serialization and deserialization are commonly used in software development to convert complex data structures or objects into a linear format.</p>
+<p>Encoding is used to represent data in a specific format that is suitable for a particular purpose, such as storage, transmission, or presentation. Encoding and Decoding are similar concepts to serialization and deserialization. However, serialization and deserialization are commonly used in software development to convert complex data structures or objects into a linear format.</p>
 
     <h3>Core Concepts</h3>
     
@@ -239,5 +238,5 @@ String text = new String(utf8Bytes, StandardCharsets.UTF_8);</code></pre>
       <li><strong>Network Protocols:</strong> Binary to text encoding</li>
       <li><strong>Cryptography:</strong> Base64 for keys and certificates</li>
     </ul>
-  `
+`
 }; 

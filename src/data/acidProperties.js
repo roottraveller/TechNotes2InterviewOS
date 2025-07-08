@@ -2,8 +2,7 @@ export const acidProperties = {
   id: "acid-properties",
   title: "ACID Properties",
   content: `
-    <h2>ACID Properties</h2>
-    <p>ACID properties are typically associated with traditional relational databases and emphasize strong consistency.</p>
+<p>ACID properties are typically associated with traditional relational databases and emphasize strong consistency.</p>
 
     <h3>Atomicity</h3>
     <p>Atomicity ensures that a transaction either succeeds completely or fails completely. If any part of a transaction fails, the entire transaction is rolled back, and the database is left unchanged.</p>
@@ -24,5 +23,5 @@ export const acidProperties = {
         <li><a href="https://www.scaler.com/topics/dbms/acid-properties-in-dbms/" target="_blank">ACID Properties in DBMS</a></li>
       </ul>
     </div>
-  `
+`
 }; 

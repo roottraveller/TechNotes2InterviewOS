@@ -1,8 +1,7 @@
 export const dataStructures = {
   id: 'data-structures',
   title: 'Data Structures',
-  content: `# Data Structures
-
+  content: `
 ## Definition
 Data structures are specialized formats for organizing, storing, and manipulating data efficiently in computer programs.
 
@@ -59,5 +58,6 @@ Data structures are specialized formats for organizing, storing, and manipulatin
 
 ## Interview Questions
 **Q: When would you use a linked list over an array?**
-A: When you need frequent insertions/deletions at arbitrary positions and don't need random access to elements.`
+A: When you need frequent insertions/deletions at arbitrary positions and don't need random access to elements.
+`
 }; 

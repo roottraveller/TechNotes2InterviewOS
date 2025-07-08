@@ -2,8 +2,7 @@ export const distributedConsensus = {
   id: 'distributed-consensus',
   title: 'Distributed Consensus',
   content: `
-    <h2>Distributed Consensus</h2>
-    <p>Consensus in distributed systems refers to the process by which a group of nodes or processes agree on a single value or sequence of values despite faulty nodes, message delays, and network partitions.</p>
+<p>Consensus in distributed systems refers to the process by which a group of nodes or processes agree on a single value or sequence of values despite faulty nodes, message delays, and network partitions.</p>
     
     <h3>Why Consensus is Important</h3>
     <ul>
@@ -57,5 +56,5 @@ export const distributedConsensus = {
         <li><a href="https://lamport.azurewebsites.net/pubs/paxos-simple.pdf" target="_blank">Paxos Made Simple</a></li>
       </ul>
     </div>
-  `
+`
 }; 

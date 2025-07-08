@@ -2,8 +2,7 @@ export const cors = {
   id: 'cors',
   title: 'CORS (Cross-Origin Resource Sharing)',
   content: `
-    <h2>CORS (Cross-Origin Resource Sharing)</h2>
-    <p>Web browsers enforce a security policy known as the Same-Origin Policy, which restricts web pages from making requests to resources (e.g., APIs, images, scripts) on domains other than the one that served the web page.</p>
+<p>Web browsers enforce a security policy known as the Same-Origin Policy, which restricts web pages from making requests to resources (e.g., APIs, images, scripts) on domains other than the one that served the web page.</p>
 
     <h3>Same-Origin Policy</h3>
     <p>Two URLs have the same origin if they have identical:</p>
@@ -293,5 +292,5 @@ fetch('https://api.example.com/data', {
     <ul>
       <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS" target="_blank">MDN - Cross-Origin Resource Sharing (CORS)</a></li>
     </ul>
-  `
+`
 }; 

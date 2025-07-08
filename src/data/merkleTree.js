@@ -2,8 +2,7 @@ export const merkleTree = {
   id: 'merkle-tree',
   title: 'Merkle Tree',
   content: `
-    <h2>Merkle Tree</h2>
-    <p>A Merkle tree (also known as hash tree) is a binary tree data structure where each leaf node represents a data block and each non-leaf node stores the cryptographic hash of its child nodes. It provides efficient and secure verification of large data structures.</p>
+<p>A Merkle tree (also known as hash tree) is a binary tree data structure where each leaf node represents a data block and each non-leaf node stores the cryptographic hash of its child nodes. It provides efficient and secure verification of large data structures.</p>
     
     <h3>What is a Merkle Tree?</h3>
     <ul>
@@ -596,5 +595,5 @@ class MerkleNode {
         <li><a href="https://brilliant.org/wiki/merkle-tree/" target="_blank">Merkle Trees - Brilliant</a></li>
       </ul>
     </div>
-  `
+`
 }; 

@@ -2,8 +2,7 @@ export const consistentHashingVsLoadBalancing = {
   id: "consistent-hashing-vs-load-balancing",
   title: "Consistent Hashing vs Load Balancing",
   content: `
-    <h2>Consistent Hashing vs Load Balancing</h2>
-    <p>Understanding the key differences between consistent hashing and load balancing approaches in distributed systems.</p>
+<p>Understanding the key differences between consistent hashing and load balancing approaches in distributed systems.</p>
 
     <h3>Consistent Hashing</h3>
     <p>Consistent hashing handles the distribution of <strong>data (data partitioning)</strong> across nodes and determines which node is responsible for each piece of data based on a consistent hashing scheme.</p>
@@ -88,5 +87,5 @@ export const consistentHashingVsLoadBalancing = {
     <div class="info-note">
       <strong>Note:</strong> These approaches are complementary and often used together in large-scale distributed systems. Consistent hashing for data partitioning and load balancing for request distribution.
     </div>
-  `
+`
 }; 

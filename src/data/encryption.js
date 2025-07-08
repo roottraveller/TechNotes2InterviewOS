@@ -1,8 +1,7 @@
 export const encryption = {
   id: 'encryption',
   title: 'Encryption',
-  content: `# Encryption
-
+  content: `
 ## Definition
 Encryption is the process of converting readable data (plaintext) into an unreadable format (ciphertext) to protect information from unauthorized access.
 
@@ -54,5 +53,6 @@ Verify authenticity and integrity using private key signing
 
 ## Interview Questions
 **Q: When would you use symmetric vs asymmetric encryption?**
-A: Symmetric for bulk data encryption (faster), asymmetric for key exchange and digital signatures (more secure but slower).`
+A: Symmetric for bulk data encryption (faster), asymmetric for key exchange and digital signatures (more secure but slower).
+`
 }; 

@@ -1,8 +1,7 @@
 export const cicd = {
   id: 'cicd',
   title: 'CI/CD (Continuous Integration/Continuous Deployment)',
-  content: `# CI/CD (Continuous Integration/Continuous Deployment)
-
+  content: `
 ## Definition
 CI/CD is a software development practice that automates the integration, testing, and deployment of code changes.
 
@@ -49,5 +48,6 @@ CI/CD is a software development practice that automates the integration, testing
 
 ## Interview Questions
 **Q: What's the difference between Continuous Deployment and Continuous Delivery?**
-A: Continuous Delivery prepares code for release, while Continuous Deployment automatically releases to production.`
+A: Continuous Delivery prepares code for release, while Continuous Deployment automatically releases to production.
+`
 }; 

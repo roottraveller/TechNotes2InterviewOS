@@ -2,8 +2,7 @@ export const deadlockDetectionPrevention = {
   id: 'deadlock-detection-prevention',
   title: 'Deadlock Detection and Prevention',
   content: `
-    <h2>Deadlock Detection and Prevention</h2>
-    <p>Deadlocks occur when two or more transactions wait indefinitely for each other to release resources. Understanding detection and prevention strategies is crucial for database system design.</p>
+<p>Deadlocks occur when two or more transactions wait indefinitely for each other to release resources. Understanding detection and prevention strategies is crucial for database system design.</p>
     
     <h3>What is a Deadlock?</h3>
     <ul>
@@ -200,5 +199,5 @@ WHERE blocking_session_id > 0;</code></pre>
         <li><a href="https://www.postgresql.org/docs/current/explicit-locking.html" target="_blank">PostgreSQL Explicit Locking</a></li>
       </ul>
     </div>
-  `
+`
 }; 

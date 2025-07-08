@@ -2,8 +2,7 @@ export const serializationDeserialization = {
   id: 'serialization-deserialization',
   title: 'Serialization and Deserialization',
   content: `
-    <h2>Serialization and Deserialization</h2>
-    <p>Serialization refers to the process of converting data objects from their in-memory representation into a byte stream that can be transmitted over a network or stored in a file or database. Deserialization is the reverse process of serialization. It involves converting a byte stream back into its original in-memory data object.</p>
+<p>Serialization refers to the process of converting data objects from their in-memory representation into a byte stream that can be transmitted over a network or stored in a file or database. Deserialization is the reverse process of serialization. It involves converting a byte stream back into its original in-memory data object.</p>
 
     <h3>Core Concepts</h3>
     
@@ -258,5 +257,5 @@ User user = JsonConvert.DeserializeObject<User>(json);</code></pre>
       <li><strong>Database Storage:</strong> BLOB fields</li>
       <li><strong>Configuration Files:</strong> JSON, YAML, XML</li>
     </ul>
-  `
+`
 }; 

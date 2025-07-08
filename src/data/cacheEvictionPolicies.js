@@ -2,8 +2,6 @@ export const cacheEvictionPolicies = {
   id: 'cache-eviction-policies',
   title: 'Cache Eviction Policies',
   content: `
-# Cache Eviction Policies
-
 Cache eviction policies determine which data to remove when cache capacity is reached. Understanding these policies is crucial for optimizing cache performance and hit rates.
 
 ## Overview

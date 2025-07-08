@@ -1,8 +1,7 @@
 export const normalization = {
   id: 'normalization',
   title: 'Database Normalization',
-  content: `# Database Normalization
-
+  content: `
 ## Definition
 Database normalization is the process of organizing data to reduce redundancy and improve data integrity.
 
@@ -36,5 +35,6 @@ Sometimes intentionally breaking normal forms for:
 A: 2NF eliminates partial dependencies on composite keys, while 3NF eliminates transitive dependencies between non-key attributes.
 
 **Q: When would you consider denormalization?**
-A: For read-heavy workloads, data warehousing, or when query performance is more critical than storage efficiency.`
+A: For read-heavy workloads, data warehousing, or when query performance is more critical than storage efficiency.
+`
 }; 

@@ -1,8 +1,7 @@
 export const webServer = {
   id: 'web-server',
   title: 'Web Server',
-  content: `# Web Server
-
+  content: `
 ## Definition
 A web server is a computer system that hosts websites and serves web pages to users over the internet or an intranet.
 
@@ -29,5 +28,6 @@ A web server is a computer system that hosts websites and serves web pages to us
 A: A web server primarily serves static content and handles HTTP requests, while an application server can execute business logic and dynamic applications.
 
 **Q: How does a web server handle multiple concurrent requests?**
-A: Through various models like multi-threading, event-driven architecture, or worker processes.`
+A: Through various models like multi-threading, event-driven architecture, or worker processes.
+`
 }; 

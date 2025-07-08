@@ -2,8 +2,7 @@ export const resourceStarvation = {
   id: 'resource-starvation',
   title: 'Resource Starvation',
   content: `
-    <h2>Resource Starvation</h2>
-    <p>Resource starvation occurs in distributed systems when certain processes or entities are unable to access the resources (CPU, Memory, Network, I/O, Lock etc) they need, leading to degradation or failure of the system.</p>
+<p>Resource starvation occurs in distributed systems when certain processes or entities are unable to access the resources (CPU, Memory, Network, I/O, Lock etc) they need, leading to degradation or failure of the system.</p>
 
     <h3>Types of Resources Subject to Starvation</h3>
     
@@ -282,5 +281,5 @@ class ResourcePool:
     <ul>
       <li><a href="https://stackoverflow.com/questions/1162587/what-is-starvation" target="_blank">What is Starvation - Stack Overflow</a></li>
     </ul>
-  `
+`
 }; 

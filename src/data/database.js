@@ -1,8 +1,7 @@
 export const database = {
   id: 'database',
   title: 'Database',
-  content: `# Database
-
+  content: `
 ## Definition
 A database is an organized collection of structured information or data, typically stored electronically in a computer system.
 
@@ -29,5 +28,6 @@ A database is an organized collection of structured information or data, typical
 A: SQL databases are relational with fixed schemas and ACID compliance, while NoSQL databases are non-relational with flexible schemas and eventual consistency.
 
 **Q: What is database normalization?**
-A: The process of organizing data to reduce redundancy and improve data integrity.`
+A: The process of organizing data to reduce redundancy and improve data integrity.
+`
 }; 

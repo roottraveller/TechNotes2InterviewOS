@@ -2,8 +2,7 @@ export const containerization = {
   id: 'containerization',
   title: 'Containerization',
   content: `
-    <h2>Containerization</h2>
-    <p>Containerization is a lightweight form of virtualization that packages applications and their dependencies into containers. Containers share the host OS kernel but run in isolated user spaces, making them more efficient than traditional virtual machines.</p>
+<p>Containerization is a lightweight form of virtualization that packages applications and their dependencies into containers. Containers share the host OS kernel but run in isolated user spaces, making them more efficient than traditional virtual machines.</p>
 
     <h3>Containers vs Virtual Machines</h3>
     
@@ -361,5 +360,5 @@ docker buildx build --platform linux/amd64,linux/arm64 \
       <li><a href="https://medium.com/@kmdkhadeer/containerization-and-orchestration-6eadd9a3c2d" target="_blank">Containerization and Orchestration</a></li>
       <li><a href="https://www.scaler.com/topics/docker/docker-vs-virtual-machine/" target="_blank">Docker vs Virtual Machine</a></li>
     </ul>
-  `
+`
 };

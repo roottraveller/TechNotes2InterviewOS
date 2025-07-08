@@ -2,8 +2,7 @@ export const softwareDesignPatterns = {
   id: 'software-design-patterns',
   title: 'Software Design Patterns',
   content: `
-    <h2>Software Design Patterns</h2>
-    <p>Design patterns are reusable solutions to common problems in software design. They represent best practices and proven solutions that developers have refined over time.</p>
+<p>Design patterns are reusable solutions to common problems in software design. They represent best practices and proven solutions that developers have refined over time.</p>
 
     <h3>Categories of Design Patterns</h3>
     
@@ -735,5 +734,5 @@ const UserModule = (function() {
       <li><strong>Command + Memento:</strong> Undo/redo functionality</li>
       <li><strong>Strategy + Factory:</strong> Factory selects strategy</li>
     </ul>
-  `
+`
 }; 

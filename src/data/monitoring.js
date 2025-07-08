@@ -1,8 +1,7 @@
 export const monitoring = {
   id: 'monitoring',
   title: 'System Monitoring',
-  content: `# System Monitoring
-
+  content: `
 ## Definition
 System monitoring is the continuous observation and measurement of system performance, health, and behavior to ensure optimal operation.
 
@@ -62,5 +61,6 @@ System monitoring is the continuous observation and measurement of system perfor
 
 ## Interview Questions
 **Q: What are the four golden signals of monitoring?**
-A: Latency (response time), traffic (request rate), errors (failure rate), and saturation (resource utilization).`
+A: Latency (response time), traffic (request rate), errors (failure rate), and saturation (resource utilization).
+`
 }; 

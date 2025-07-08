@@ -1,8 +1,7 @@
 export const nosql = {
   id: 'nosql',
   title: 'NoSQL Databases',
-  content: `# NoSQL Databases
-
+  content: `
 ## Definition
 NoSQL (Not Only SQL) databases are non-relational databases designed for distributed data storage and horizontal scaling.
 
@@ -35,5 +34,6 @@ NoSQL (Not Only SQL) databases are non-relational databases designed for distrib
 A: For applications requiring horizontal scaling, flexible schemas, high write throughput, or handling unstructured data.
 
 **Q: What is eventual consistency?**
-A: A consistency model where the system will become consistent over time, but may not be immediately consistent after updates.`
+A: A consistency model where the system will become consistent over time, but may not be immediately consistent after updates.
+`
 }; 

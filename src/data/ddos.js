@@ -2,8 +2,7 @@ export const ddos = {
   id: 'distributed-denial-of-service',
   title: 'Distributed Denial of Service (DDoS)',
   content: `
-    <h2>Distributed Denial of Service (DDoS)</h2>
-    <p>In a DDoS attack, multiple compromised computers or devices, often referred to as "bots" or "zombies," are used to generate or amplify the attack traffic, overwhelming the target's resources such as bandwidth, CPU, memory, or network connections.</p>
+<p>In a DDoS attack, multiple compromised computers or devices, often referred to as "bots" or "zombies," are used to generate or amplify the attack traffic, overwhelming the target's resources such as bandwidth, CPU, memory, or network connections.</p>
 
     <h3>How DDoS Attacks Work</h3>
     
@@ -192,5 +191,5 @@ def detect_ddos_patterns(traffic_data):
       <li><strong>Reputation Damage:</strong> Loss of customer trust</li>
       <li><strong>Recovery Costs:</strong> Incident response and analysis</li>
     </ul>
-  `
+`
 }; 

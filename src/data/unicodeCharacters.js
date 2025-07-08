@@ -2,8 +2,7 @@ export const unicodeCharacters = {
   id: 'unicode-characters',
   title: 'Unicode Characters',
   content: `
-    <h2>Unicode Characters</h2>
-    <p>Unicode is a universal character encoding standard that assigns a unique number to every character across all languages and writing systems. Characters are typically represented in hexadecimal format. The length of a Unicode character representation in bits depends on the encoding scheme used.</p>
+<p>Unicode is a universal character encoding standard that assigns a unique number to every character across all languages and writing systems. Characters are typically represented in hexadecimal format. The length of a Unicode character representation in bits depends on the encoding scheme used.</p>
 
     <h3>Unicode Encoding Schemes</h3>
     
@@ -165,5 +164,5 @@ console.log([...emoji].length);     // 7 (code points)
     <ul>
       <li><a href="https://symbl.cc/en/unicode-table/#devanagari" target="_blank">Unicode Table - Devanagari</a></li>
     </ul>
-  `
+`
 }; 

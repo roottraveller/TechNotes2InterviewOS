@@ -1,8 +1,7 @@
 export const monolith = {
   id: 'monolith',
   title: 'Monolithic Architecture',
-  content: `# Monolithic Architecture
-
+  content: `
 ## Definition
 A monolithic architecture is a software design pattern where all components of an application are interconnected and deployed as a single unit.
 
@@ -41,5 +40,6 @@ A monolithic architecture is a software design pattern where all components of a
 
 ## Interview Questions
 **Q: When would you choose a monolith over microservices?**
-A: For small teams, simple applications, or when rapid development and deployment simplicity are priorities.`
+A: For small teams, simple applications, or when rapid development and deployment simplicity are priorities.
+`
 }; 

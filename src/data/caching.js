@@ -2,8 +2,7 @@ export const caching = {
   id: 'caching',
   title: 'Caching Strategies',
   content: `
-    <h2>Caching Strategies</h2>
-    <p>Caching is a technique used to store frequently accessed data in a fast storage layer to improve application performance and reduce latency.</p>
+<p>Caching is a technique used to store frequently accessed data in a fast storage layer to improve application performance and reduce latency.</p>
 
     <h3>Types of Caching</h3>
     
@@ -150,5 +149,5 @@ function getData(key) {
       <strong>💡 Key Insight:</strong>
       <p>Effective caching requires understanding your data access patterns, consistency requirements, and performance goals. The right caching strategy can improve application performance by orders of magnitude.</p>
     </div>
-  `
+`
 }; 

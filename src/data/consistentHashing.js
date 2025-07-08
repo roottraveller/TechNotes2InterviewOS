@@ -2,8 +2,7 @@ export const consistentHashing = {
   id: "consistent-hashing",
   title: "Consistent Hashing",
   content: `
-    <h2>Consistent Hashing</h2>
-    <p>Consistent Hashing is a technique used in distributed systems to distribute data across multiple nodes while minimizing the need for data movement when nodes are added or removed from the system.</p>
+<p>Consistent Hashing is a technique used in distributed systems to distribute data across multiple nodes while minimizing the need for data movement when nodes are added or removed from the system.</p>
 
     <h3>How It Works</h3>
     <p>The result of applying a hash function to information or data (e.g. hash(data) = digest) is called a message digest or digest, or hash value.</p>
@@ -37,5 +36,5 @@ export const consistentHashing = {
         <li><a href="https://github.com/roottraveller/DSAlgo-HowToDoIt-learningcode/tree/master/consistent-hashing-implementation" target="_blank">Implementation Example</a></li>
       </ul>
     </div>
-  `
+`
 }; 

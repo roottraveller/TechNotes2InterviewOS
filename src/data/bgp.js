@@ -2,8 +2,7 @@ export const bgp = {
   id: 'bgp',
   title: 'BGP (Border Gateway Protocol)',
   content: `
-    <h2>BGP (Border Gateway Protocol)</h2>
-    <p>BGP is the protocol that routers use to make decisions about how to route packets between different networks. It's the routing protocol that makes the internet work by enabling data routing between autonomous systems (AS).</p>
+<p>BGP is the protocol that routers use to make decisions about how to route packets between different networks. It's the routing protocol that makes the internet work by enabling data routing between autonomous systems (AS).</p>
 
     <h3>What is BGP?</h3>
     <ul>
@@ -215,5 +214,5 @@ clear ip bgp 192.168.1.1 soft</code></pre>
     <ul>
       <li><a href="https://www.scaler.com/topics/computer-network/bgp-border-gateway-protocol/" target="_blank">BGP Border Gateway Protocol - Scaler</a></li>
     </ul>
-  `
+`
 }; 

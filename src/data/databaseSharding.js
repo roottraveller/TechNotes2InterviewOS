@@ -2,8 +2,7 @@ export const databaseSharding = {
   id: 'database-sharding',
   title: 'Database Sharding',
   content: `
-    <h2>Database Sharding</h2>
-    <p>Database sharding is a database architecture pattern that involves splitting a large database into smaller, more manageable pieces called shards, distributed across multiple servers.</p>
+<p>Database sharding is a database architecture pattern that involves splitting a large database into smaller, more manageable pieces called shards, distributed across multiple servers.</p>
 
     <h3>What is Sharding?</h3>
     
@@ -337,5 +336,5 @@ class OnlineResharding {
       <strong>💡 Key Insight:</strong>
       <p>Sharding is a powerful technique for scaling databases horizontally, but it introduces significant complexity. Carefully evaluate whether simpler scaling approaches can meet your needs before implementing sharding.</p>
     </div>
-  `
+`
 }; 

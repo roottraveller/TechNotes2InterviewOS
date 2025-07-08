@@ -1,8 +1,7 @@
 export const authentication = {
   id: 'authentication',
   title: 'Authentication',
-  content: `# Authentication
-
+  content: `
 ## Definition
 Authentication is the process of verifying the identity of a user, device, or system attempting to access a resource.
 
@@ -49,5 +48,6 @@ Authentication is the process of verifying the identity of a user, device, or sy
 
 ## Interview Questions
 **Q: What's the difference between authentication and authorization?**
-A: Authentication verifies who you are, while authorization determines what you're allowed to do.`
+A: Authentication verifies who you are, while authorization determines what you're allowed to do.
+`
 }; 

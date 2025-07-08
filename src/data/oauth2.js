@@ -2,8 +2,7 @@ export const oauth2 = {
   id: "oauth2",
   title: "OAuth 2.0",
   content: `
-    <h2>OAuth 2.0</h2>
-    <p>OAuth 2.0 is an authorization framework that enables applications to obtain limited access to user accounts on an HTTP service without exposing user credentials.</p>
+<p>OAuth 2.0 is an authorization framework that enables applications to obtain limited access to user accounts on an HTTP service without exposing user credentials.</p>
 
     <h3>OAuth 2.0 Flow Components</h3>
     
@@ -115,5 +114,5 @@ export const oauth2 = {
         <li><a href="https://tools.ietf.org/html/rfc7636" target="_blank">RFC 7636 - PKCE Extension</a></li>
       </ul>
     </div>
-  `
+`
 }; 

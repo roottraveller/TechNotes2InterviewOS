@@ -1,8 +1,7 @@
 export const indexing = {
   id: 'indexing',
   title: 'Database Indexing',
-  content: `# Database Indexing
-
+  content: `
 ## Definition
 Database indexing is a data structure technique used to quickly locate and access data in a database table.
 
@@ -37,5 +36,6 @@ Database indexing is a data structure technique used to quickly locate and acces
 A: On frequently queried columns, foreign keys, and columns used in WHERE, ORDER BY, and JOIN clauses.
 
 **Q: What is the difference between clustered and non-clustered indexes?**
-A: Clustered indexes physically reorder table data, while non-clustered indexes create separate structures with pointers to data rows.`
+A: Clustered indexes physically reorder table data, while non-clustered indexes create separate structures with pointers to data rows.
+`
 }; 

@@ -2,8 +2,7 @@ export const gossipProtocol = {
   id: 'gossip-protocol',
   title: 'Gossip Protocol',
   content: `
-    <h2>Gossip Protocol</h2>
-    <p>Gossip protocol (also known as epidemic protocol) is a decentralized communication protocol used in distributed systems for information dissemination, failure detection, and maintaining cluster membership information.</p>
+<p>Gossip protocol (also known as epidemic protocol) is a decentralized communication protocol used in distributed systems for information dissemination, failure detection, and maintaining cluster membership information.</p>
     
     <h3>How Gossip Protocol Works</h3>
     <ul>
@@ -246,5 +245,5 @@ Example: N=1000 nodes, f=3, interval=1s
         <li><a href="https://www.consul.io/docs/architecture/gossip" target="_blank">Consul Gossip Protocol</a></li>
       </ul>
     </div>
-  `
+`
 }; 

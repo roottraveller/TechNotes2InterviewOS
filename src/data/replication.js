@@ -1,8 +1,7 @@
 export const replication = {
   id: 'replication',
   title: 'Database Replication',
-  content: `# Database Replication
-
+  content: `
 ## Definition
 Database replication is the process of copying and maintaining database objects across multiple database servers.
 
@@ -36,5 +35,6 @@ Database replication is the process of copying and maintaining database objects 
 A: Synchronous replication ensures immediate consistency but higher latency, while asynchronous allows for better performance but potential data lag.
 
 **Q: How do you handle conflicts in master-master replication?**
-A: Through conflict resolution strategies like last-write-wins, application-level resolution, or vector clocks.`
+A: Through conflict resolution strategies like last-write-wins, application-level resolution, or vector clocks.
+`
 }; 

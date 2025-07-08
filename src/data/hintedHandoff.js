@@ -2,8 +2,7 @@ export const hintedHandoff = {
   id: 'hinted-handoff',
   title: 'Hinted Handoff',
   content: `
-    <h2>Hinted Handoff</h2>
-    <p>Hinted handoff is a technique used in distributed databases to improve write availability during temporary node failures by storing write operations intended for unavailable nodes and replaying them when the nodes recover.</p>
+<p>Hinted handoff is a technique used in distributed databases to improve write availability during temporary node failures by storing write operations intended for unavailable nodes and replaying them when the nodes recover.</p>
     
     <h3>How Hinted Handoff Works</h3>
     <ul>
@@ -179,5 +178,5 @@ max_hints_file_size_in_mb: 128</code></pre>
         <li><a href="https://www.allthingsdistributed.com/files/amazon-dynamo-sosp2007.pdf" target="_blank">Amazon Dynamo Paper</a></li>
       </ul>
     </div>
-  `
+`
 }; 

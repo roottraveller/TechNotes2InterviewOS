@@ -1,8 +1,7 @@
 export const rateLimit = {
   id: 'rate-limit',
   title: 'Rate Limiting',
-  content: `# Rate Limiting
-
+  content: `
 ## Definition
 Rate limiting controls the number of requests a client can make to an API or service within a specific time period.
 
@@ -73,5 +72,6 @@ Rate limiting controls the number of requests a client can make to an API or ser
 
 ## Interview Questions
 **Q: What's the difference between token bucket and leaky bucket algorithms?**
-A: Token bucket allows bursts up to bucket capacity, while leaky bucket processes requests at a constant rate regardless of arrival pattern.`
+A: Token bucket allows bursts up to bucket capacity, while leaky bucket processes requests at a constant rate regardless of arrival pattern.
+`
 }; 

@@ -2,8 +2,7 @@ export const rateLimiting = {
   id: 'rate-limiting',
   title: 'Rate Limiting',
   content: `
-    <h2>Rate Limiting</h2>
-    <p>Rate limiting is used to control the rate at which clients or users can access a particular resource or service over a specified period of time. It helps prevent abuse, misuse, or overloading of the system by limiting the number of requests or transactions that can be processed within a given timeframe.</p>
+<p>Rate limiting is used to control the rate at which clients or users can access a particular resource or service over a specified period of time. It helps prevent abuse, misuse, or overloading of the system by limiting the number of requests or transactions that can be processed within a given timeframe.</p>
 
     <h3>Why Rate Limiting?</h3>
     
@@ -458,5 +457,5 @@ app.use(async (req, res, next) => {
       <li><strong>No Recovery Path:</strong> How to get unblocked</li>
       <li><strong>Lost Work:</strong> Failed uploads/submissions</li>
     </ul>
-  `
+`
 }; 

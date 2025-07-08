@@ -1,8 +1,7 @@
 export const logging = {
   id: 'logging',
   title: 'Logging',
-  content: `# Logging
-
+  content: `
 ## Definition
 Logging is the practice of recording events, errors, and information during application execution for debugging, monitoring, and auditing purposes.
 
@@ -70,5 +69,6 @@ Logging is the practice of recording events, errors, and information during appl
 
 ## Interview Questions
 **Q: What's the difference between logging and monitoring?**
-A: Logging records discrete events and messages, while monitoring continuously measures system metrics and performance indicators.`
+A: Logging records discrete events and messages, while monitoring continuously measures system metrics and performance indicators.
+`
 }; 

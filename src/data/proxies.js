@@ -2,8 +2,7 @@ export const proxies = {
   id: 'proxies',
   title: 'Proxies',
   content: `
-    <h2>Proxies</h2>
-    <p>A proxy server acts as an intermediary between clients and servers, forwarding requests and responses. Proxies provide various benefits including security, performance optimization, access control, and anonymity.</p>
+<p>A proxy server acts as an intermediary between clients and servers, forwarding requests and responses. Proxies provide various benefits including security, performance optimization, access control, and anonymity.</p>
 
     <h3>Types of Proxies</h3>
     
@@ -616,5 +615,5 @@ function checkAccess(req) {
         </tr>
       </tbody>
     </table>
-  `
+`
 }; 

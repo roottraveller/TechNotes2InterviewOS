@@ -2,8 +2,7 @@ export const urlVsUriVsUrn = {
   id: 'url-vs-uri-vs-urn',
   title: 'URL vs URI vs URN',
   content: `
-    <h2>URL vs URI vs URN</h2>
-    <p>Understanding the differences between URL, URI, and URN is essential for web development and system design. These terms are often confused but have distinct meanings and purposes.</p>
+<p>Understanding the differences between URL, URI, and URN is essential for web development and system design. These terms are often confused but have distinct meanings and purposes.</p>
 
     <h3>URI (Uniform Resource Identifier)</h3>
     <p>URI is the most general term - it's a string that identifies a resource, either by its location, name, or both. URI is the superset that includes both URLs and URNs.</p>
@@ -192,5 +191,5 @@ Not all URIs are URLs or URNs</code></pre>
       <li><strong>RFC 2141:</strong> URN Syntax</li>
       <li><strong>RFC 8141:</strong> URN (updated)</li>
     </ul>
-  `
+`
 }; 

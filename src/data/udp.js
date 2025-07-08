@@ -1,8 +1,7 @@
 export const udp = {
   id: 'udp',
   title: 'UDP (User Datagram Protocol)',
-  content: `# UDP (User Datagram Protocol)
-
+  content: `
 ## Definition
 UDP is a connectionless, unreliable protocol that provides fast data transmission without guarantees.
 
@@ -40,5 +39,6 @@ UDP is a connectionless, unreliable protocol that provides fast data transmissio
 
 ## Interview Questions
 **Q: When would you choose UDP over TCP?**
-A: For real-time applications where speed is more important than reliability, like gaming or streaming.`
+A: For real-time applications where speed is more important than reliability, like gaming or streaming.
+`
 }; 

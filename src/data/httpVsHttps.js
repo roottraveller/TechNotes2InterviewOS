@@ -2,8 +2,7 @@ export const httpVsHttps = {
   id: 'http-vs-https',
   title: 'HTTP vs HTTPS',
   content: `
-    <h2>HTTP vs HTTPS</h2>
-    <p>HTTP (Hypertext Transfer Protocol) and HTTPS (HTTP Secure) are the foundation of data communication on the World Wide Web. Understanding their differences is crucial for web security and performance.</p>
+<p>HTTP (Hypertext Transfer Protocol) and HTTPS (HTTP Secure) are the foundation of data communication on the World Wide Web. Understanding their differences is crucial for web security and performance.</p>
 
     <h3>HTTP (Hypertext Transfer Protocol)</h3>
     <p>HTTP requests and responses are typically sent and received over the network as plain text. The content of HTTP messages, including headers and message bodies, is human-readable and not encrypted by default. It typically uses port 80 for communication.</p>
@@ -247,5 +246,5 @@ X-Content-Type-Options: nosniff</code></pre>
       <li><a href="https://www.cloudflare.com/learning/ssl/why-is-http-not-secure/" target="_blank">Why is HTTP not secure? - Cloudflare</a></li>
       <li><a href="https://blog.bytebytego.com/p/how-https-works-youtube-diagram-as" target="_blank">How HTTPS Works - ByteByteGo</a></li>
     </ul>
-  `
+`
 }; 

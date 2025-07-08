@@ -1,8 +1,7 @@
 export const partitioning = {
   id: 'partitioning',
   title: 'Database Partitioning',
-  content: `# Database Partitioning
-
+  content: `
 ## Definition
 Database partitioning is the process of dividing a large database into smaller, more manageable pieces called partitions.
 
@@ -38,5 +37,6 @@ Database partitioning is the process of dividing a large database into smaller, 
 A: Partitioning can be within a single database instance, while sharding typically involves distributing data across multiple database servers.
 
 **Q: How do you handle cross-shard queries?**
-A: Through techniques like scatter-gather, denormalization, or maintaining lookup tables.`
+A: Through techniques like scatter-gather, denormalization, or maintaining lookup tables.
+`
 }; 

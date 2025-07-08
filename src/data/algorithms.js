@@ -2,8 +2,7 @@ export const algorithms = {
   id: 'algorithms',
   title: 'Sorting & Searching Algorithms',
   content: `
-    <h2>Sorting & Searching Algorithms</h2>
-    <p>Sorting and searching are fundamental algorithmic problems. Understanding different approaches, their time complexities, and trade-offs is essential for efficient problem-solving.</p>
+<p>Sorting and searching are fundamental algorithmic problems. Understanding different approaches, their time complexities, and trade-offs is essential for efficient problem-solving.</p>
 
     <h3>Sorting Algorithms</h3>
 
@@ -602,5 +601,5 @@ function exponentialSearch(arr, target) {
       <strong>💡 Key Insight:</strong>
       <p>Algorithm choice depends on data characteristics, performance requirements, and constraints. Understanding trade-offs between time, space, and stability helps in making optimal decisions.</p>
     </div>
-  `
+`
 }; 
