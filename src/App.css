@@ -6,6 +6,13 @@
   overflow: hidden;
 }
 
+.main-content {
+  flex: 1;
+  display: flex;
+  overflow: hidden;
+  height: calc(100vh - 64px); /* Subtract header height */
+}
+
 .app-body {
   flex: 1;
   display: flex;
@@ -19,6 +26,7 @@
   flex: 1;
   overflow: hidden;
   height: 100%;
+  width: 100%;
 }
 
 .sidebar-container {
@@ -277,6 +285,21 @@
   letter-spacing: 0.5px;
 }
 
+/* Mobile layout */
+.mobile-layout {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+
+.mobile-content {
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+  height: 100%;
+}
+
 /* Mobile-specific styles */
 @media (max-width: 768px) {
   .app {
@@ -284,7 +307,7 @@
     height: -webkit-fill-available; /* iOS Safari fix */
   }
   
-  .app-body {
+  .main-content {
     flex-direction: column;
     position: relative;
     height: calc(100vh - 64px);

@@ -64,7 +64,7 @@ const TopicRoute = ({
 
   return isMobile ? (
     // Mobile layout
-    <>
+    <div className="mobile-layout">
       <Sidebar
         topics={appData.topics}
         selectedTopic={topicId}
@@ -75,8 +75,10 @@ const TopicRoute = ({
         isMobileMenuOpen={isMobileMenuOpen}
         onMobileMenuClose={onMobileMenuClose}
       />
-      <ContentPanel content={getSelectedContent()} />
-    </>
+      <div className="mobile-content">
+        <ContentPanel content={getSelectedContent()} />
+      </div>
+    </div>
   ) : (
     // Desktop layout with collapsible sidebar
     <div className="desktop-layout">

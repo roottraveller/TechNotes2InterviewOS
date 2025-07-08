@@ -97,7 +97,7 @@ const HomeRoute = ({
 
   return isMobile ? (
     // Mobile layout
-    <>
+    <div className="mobile-layout">
       <Sidebar
         topics={appData.topics}
         selectedTopic={null}
@@ -108,8 +108,10 @@ const HomeRoute = ({
         isMobileMenuOpen={isMobileMenuOpen}
         onMobileMenuClose={onMobileMenuClose}
       />
-      <ContentPanel content={getWelcomeContent()} />
-    </>
+      <div className="mobile-content">
+        <ContentPanel content={getWelcomeContent()} />
+      </div>
+    </div>
   ) : (
     // Desktop layout with collapsible sidebar
     <div className="desktop-layout">
