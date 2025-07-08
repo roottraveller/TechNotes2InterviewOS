@@ -210,8 +210,8 @@
 .reference-links {
   background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-tertiary) 100%);
   border-left: 4px solid var(--accent-primary);
-  padding: 1.5rem;
-  margin: 2rem 0;
+  padding: 1rem;
+  margin: 1rem 0;
   border-radius: 0 8px 8px 0;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
@@ -231,7 +231,7 @@
 }
 
 .reference-links li {
-  padding: 0.25rem 0 0.25rem 1.5rem;
+  padding: 0.125rem 0 0.125rem 1.5rem;
 }
 
 .reference-links li::before {
@@ -248,12 +248,12 @@
   border: 1px solid var(--accent-primary);
   border-radius: 8px;
   padding: 1.5rem;
-  margin: 2rem 0;
+  margin: 1rem 0;
   position: relative;
 }
 
 .info-note::before {
-  content: 'ℹ️';
+  content: '';
   position: absolute;
   top: -8px;
   left: 16px;
@@ -264,6 +264,49 @@
 
 .info-note strong {
   color: var(--accent-primary);
+}
+
+/* Details/Summary styling for collapsible examples */
+.content-panel details {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+.content-panel summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 0.5rem 0 0.25rem 0;
+  margin-bottom: 0;
+  font-weight: 600;
+  color: var(--accent-primary);
+  border: none;
+  outline: none;
+  background: none;
+  transition: color 0.2s ease;
+}
+
+.content-panel summary:hover {
+  color: var(--accent-secondary);
+}
+
+.content-panel summary::-webkit-details-marker {
+  display: none;
+}
+
+.content-panel summary::before {
+  content: '▶';
+  display: inline-block;
+  margin-right: 0.5rem;
+  transition: transform 0.2s ease;
+}
+
+.content-panel details[open] summary::before {
+  transform: rotate(90deg);
+}
+
+.content-panel details .info-note {
+  margin-top: 0;
 }
 
 /* Enhanced table styling */

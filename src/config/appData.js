@@ -118,7 +118,6 @@ import { sql } from '../data/sql';
 import { tcp } from '../data/tcp';
 import { tcpIpModel } from '../data/tcpIpModel';
 import { tcpVsUdp } from '../data/tcpVsUdp';
-import { thunderingHerd } from '../data/thunderingHerd';
 import { thunderingHerdProblem } from '../data/thunderingHerdProblem';
 import { timeoutPattern } from '../data/timeoutPattern';
 import { timestampingProtocol } from '../data/timestampingProtocol';
@@ -316,10 +315,6 @@ export const appData = {
           category: 'Distributed Systems Theory'
         },
         {
-          ...thunderingHerd,
-          category: 'Distributed Systems Theory'
-        },
-        {
           ...resourceStarvation,
           category: 'Distributed Systems Theory'
         },
@@ -414,10 +409,6 @@ export const appData = {
           category: 'System Architecture & Scalability'
         },
         {
-          ...hashing,
-          category: 'System Architecture & Scalability'
-        },
-        {
           ...proxies,
           category: 'System Architecture & Scalability'
         },
@@ -437,10 +428,6 @@ export const appData = {
         },
         {
           ...jwt,
-          category: 'Security & Authentication'
-        },
-        {
-          ...oauth,
           category: 'Security & Authentication'
         },
         {
@@ -685,10 +672,6 @@ export const appData = {
         },
         {
           ...restApi,
-          category: 'Performance & Reliability'
-        },
-        {
-          ...rateLimit,
           category: 'Performance & Reliability'
         },
         {

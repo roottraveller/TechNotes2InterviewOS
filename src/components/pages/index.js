@@ -4,4 +4,5 @@
  */
  
 export { default as About } from './About';
-export { default as AllTopics } from './AllTopics'; 
+export { default as AllTopics } from './AllTopics';
+export { default as Mentorship } from './Mentorship'; 

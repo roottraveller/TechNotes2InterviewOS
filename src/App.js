@@ -1,7 +1,7 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { Header } from './components';
-import { About, AllTopics } from './components';
+import { About, AllTopics, Mentorship } from './components';
 import { HomeRoute, TopicRoute } from './routes';
 import { useResponsive, useTheme, useSidebar, useNavigation } from './hooks';
 import { Router } from './utils';
@@ -29,7 +29,8 @@ function AppContent() {
     handleSubtopicSelect,
     handleHomeClick,
     handleAboutClick,
-    handleTopicsClick
+    handleTopicsClick,
+    handleMentorshipClick
   } = useNavigation(closeMobileMenu);
 
   // Common props for route components
@@ -49,6 +50,7 @@ function AppContent() {
         onHomeClick={handleHomeClick}
         onAboutClick={handleAboutClick}
         onTopicsClick={handleTopicsClick}
+        onMentorshipClick={handleMentorshipClick}
         onThemeToggle={toggleTheme}
         onMobileMenuToggle={toggleMobileMenu}
         isDarkMode={isDarkMode}
@@ -75,6 +77,10 @@ function AppContent() {
           <Route 
             path="/topics" 
             element={<AllTopics />} 
+          />
+          <Route 
+            path="/mentorship" 
+            element={<Mentorship />} 
           />
         </Routes>
       </main>

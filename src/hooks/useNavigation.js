@@ -43,11 +43,17 @@ export const useNavigation = (closeMobileMenu) => {
     closeMobileMenu();
   };
 
+  const handleMentorshipClick = () => {
+    navigate('/mentorship');
+    closeMobileMenu();
+  };
+
   return {
     handleTopicSelect,
     handleSubtopicSelect,
     handleHomeClick,
     handleAboutClick,
-    handleTopicsClick
+    handleTopicsClick,
+    handleMentorshipClick
   };
 }; 

@@ -27,6 +27,7 @@ export const ROUTES = {
   HOME: '/',
   ABOUT: '/about',
   TOPICS: '/topics',
+  MENTORSHIP: '/mentorship',
   TOPIC: '/topic/:topicId/:subtopicId?'
 };
 
