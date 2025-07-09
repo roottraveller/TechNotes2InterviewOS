@@ -1,59 +1,72 @@
 export const oauth = {
   id: 'oauth',
-  title: 'OAuth 2.0',
+  title: 'OAuth',
   content: `
-## Definition
-OAuth 2.0 is an authorization framework that enables applications to obtain limited access to user accounts on behalf of the user.
+<h2>Definition</h2>
+<p>OAuth is an authorization framework that enables applications to obtain limited access to user accounts on an HTTP service.</p>
 
-## Key Roles
-- **Resource Owner**: User who owns the data
-- **Client**: Application requesting access
-- **Resource Server**: API server hosting protected resources
-- **Authorization Server**: Issues access tokens
+<h2>Key Roles</h2>
+<ul>
+  <li><strong>Resource Owner</strong>: User who owns the data</li>
+  <li><strong>Client</strong>: Application requesting access</li>
+  <li><strong>Authorization Server</strong>: Issues access tokens</li>
+  <li><strong>Resource Server</strong>: Hosts protected resources</li>
+</ul>
 
-## Grant Types
-- **Authorization Code**: Most secure for web apps
-- **Implicit**: For browser-based apps (deprecated)
-- **Resource Owner Password**: Direct credentials (discouraged)
-- **Client Credentials**: Machine-to-machine
-- **Refresh Token**: Obtain new access tokens
+<h2>Grant Types</h2>
+<ul>
+  <li><strong>Authorization Code</strong>: Most secure, for web apps</li>
+  <li><strong>Implicit</strong>: For single-page applications</li>
+  <li><strong>Resource Owner Password</strong>: For trusted applications</li>
+  <li><strong>Client Credentials</strong>: For server-to-server</li>
+</ul>
 
-## Authorization Code Flow
-1. Client redirects user to authorization server
-2. User authenticates and grants permission
-3. Authorization server redirects back with code
-4. Client exchanges code for access token
-5. Client uses token to access protected resources
+<h2>Authorization Code Flow</h2>
+<ol>
+  <li>Client redirects user to authorization server</li>
+  <li>User authenticates and grants permission</li>
+  <li>Authorization server redirects back with code</li>
+  <li>Client exchanges code for access token</li>
+  <li>Client uses token to access protected resources</li>
+</ol>
 
-## Tokens
-- **Access Token**: Short-lived token for API access
-- **Refresh Token**: Long-lived token to get new access tokens
-- **ID Token**: OpenID Connect identity information
+<h2>Tokens</h2>
+<ul>
+  <li><strong>Access Token</strong>: Short-lived, grants access</li>
+  <li><strong>Refresh Token</strong>: Long-lived, gets new access tokens</li>
+  <li><strong>Bearer Token</strong>: Most common token type</li>
+</ul>
 
-## Scopes
-Define the level of access requested:
-- read:profile
-- write:posts
-- admin:users
+<h2>Scopes</h2>
+<ul>
+  <li><strong>Read</strong>: View user data</li>
+  <li><strong>Write</strong>: Modify user data</li>
+  <li><strong>Profile</strong>: Access basic profile information</li>
+  <li><strong>Email</strong>: Access email address</li>
+</ul>
 
-## Security Best Practices
-- Use HTTPS everywhere
-- Validate redirect URIs
-- Short-lived access tokens
-- Secure token storage
-- PKCE for public clients
+<h2>Security Best Practices</h2>
+<ul>
+  <li><strong>HTTPS Only</strong>: All OAuth communications</li>
+  <li><strong>State Parameter</strong>: Prevent CSRF attacks</li>
+  <li><strong>Validate Redirect URIs</strong>: Prevent authorization code interception</li>
+  <li><strong>Short Token Lifetimes</strong>: Minimize exposure window</li>
+</ul>
 
-## Common Vulnerabilities
-- Authorization code interception
-- Redirect URI manipulation
-- Token leakage
-- CSRF attacks
+<h2>Common Vulnerabilities</h2>
+<ul>
+  <li><strong>Authorization Code Interception</strong>: Insecure redirect URIs</li>
+  <li><strong>CSRF Attacks</strong>: Missing state parameter</li>
+  <li><strong>Token Leakage</strong>: Insecure token storage</li>
+</ul>
 
-## OpenID Connect
-Extension of OAuth 2.0 for authentication, adds ID tokens
+<h2>OpenID Connect</h2>
+<p>Extension of OAuth 2.0 that adds identity layer with ID tokens for authentication.</p>
 
-## Interview Questions
-**Q: What's the difference between OAuth and OpenID Connect?**
-A: OAuth is for authorization (what you can do), while OpenID Connect adds authentication (who you are) on top of OAuth.
+<h2>Interview Questions</h2>
+<div class="interview-qa">
+  <h3>Q: What's the difference between OAuth and OpenID Connect?</h3>
+  <p><strong>A:</strong> OAuth is for authorization (what you can do), while OpenID Connect adds authentication (who you are) on top of OAuth.</p>
+</div>
 `
 }; 
