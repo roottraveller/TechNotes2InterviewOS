@@ -591,10 +591,6 @@ export const appData = {
           category: 'DevOps & Infrastructure'
         },
         {
-          ...containers,
-          category: 'DevOps & Infrastructure'
-        },
-        {
           ...tracing,
           category: 'DevOps & Infrastructure'
         },
