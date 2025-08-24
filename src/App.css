@@ -1,420 +1,83 @@
 .app {
-  height: 100vh;
   display: flex;
   flex-direction: column;
+  height: 100vh;
   background-color: var(--bg-primary);
-  overflow: hidden;
 }
 
 .main-content {
-  flex: 1;
   display: flex;
-  overflow: hidden;
-  height: calc(100vh - 64px); /* Subtract header height */
-}
-
-.app-body {
-  flex: 1;
-  display: flex;
-  overflow: hidden;
-  height: calc(100vh - 64px); /* Subtract header height */
-}
-
-/* Desktop layout with collapsible sidebar */
-.desktop-layout {
-  display: flex;
-  flex: 1;
-  overflow: hidden;
-  height: 100%;
-  width: 100%;
-}
-
-.sidebar-container {
-  display: flex;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  width: 320px;
-  flex-shrink: 0;
-  height: 100%;
+  flex-grow: 1;
   overflow: hidden;
 }
 
-.sidebar-container.collapsed {
-  width: 60px;
-}
-
-.content-container-wrapper {
-  flex: 1;
-  overflow: hidden;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  height: 100%;
-}
-
-/* Desktop tip styling */
-.desktop-tip {
-  background: linear-gradient(135deg, 
-    color-mix(in srgb, var(--accent-secondary) 10%, var(--bg-primary)) 0%, 
-    color-mix(in srgb, var(--accent-secondary) 5%, var(--bg-primary)) 100%);
-  border: 1px solid var(--accent-secondary);
-  border-radius: 8px;
-  padding: 1rem;
-  margin-bottom: 2rem;
+.layout-container {
   display: flex;
-  align-items: flex-start;
-  gap: 0.75rem;
-}
-
-.desktop-tip .tip-icon {
-  width: 24px;
-  height: 24px;
-  flex-shrink: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.desktop-tip .tip-icon svg {
-  width: 20px;
-  height: 20px;
-  color: var(--accent-secondary);
-}
-
-.desktop-tip p {
-  margin: 0;
-  font-size: 0.9375rem;
-  color: var(--text-primary);
-  line-height: 1.5;
-}
-
-/* Enhanced welcome content styling */
-.welcome-content {
-  max-width: 900px;
-  margin: 0 auto;
-}
-
-.welcome-hero {
-  text-align: center;
-  margin-bottom: 3rem;
-  padding: 2rem 0;
-  background: linear-gradient(135deg, var(--bg-tertiary) 0%, var(--bg-secondary) 100%);
-  border-radius: 12px;
-  margin-bottom: 2rem;
-  border: 1px solid var(--border-primary);
-}
-
-.welcome-hero h1 {
-  font-family: 'IBM Plex Serif', serif;
-  font-size: 2.5rem;
-  font-weight: 600;
-  color: var(--text-primary);
-  margin-bottom: 1rem;
-  line-height: 1.2;
-}
-
-.hero-subtitle {
-  font-size: 1.25rem;
-  color: var(--text-secondary);
-  font-weight: 400;
-  margin: 0;
-}
-
-.features-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1.5rem;
-  margin-bottom: 3rem;
-}
-
-.feature-card {
-  background: var(--bg-primary);
-  border: 1px solid var(--border-primary);
-  border-radius: 8px;
-  padding: 1.5rem;
-  text-align: center;
-  transition: all 0.2s ease;
-  box-shadow: 0 2px 4px var(--shadow-light);
-}
-
-.feature-card:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px var(--shadow-medium);
-  border-color: var(--accent-primary);
-}
-
-.feature-icon {
-  width: 48px;
-  height: 48px;
-  margin: 0 auto 1rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-secondary) 100%);
-  border-radius: 12px;
-  padding: 12px;
-}
-
-.feature-icon svg {
   width: 100%;
   height: 100%;
-  color: var(--bg-primary);
 }
 
-.feature-card h3 {
-  font-family: 'IBM Plex Sans', sans-serif;
-  font-size: 1.125rem;
-  font-weight: 500;
-  color: var(--text-primary);
-  margin-bottom: 0.5rem;
-}
-
-.feature-card p {
-  font-size: 0.9375rem;
-  color: var(--text-secondary);
-  margin: 0;
-  line-height: 1.5;
-}
-
-.getting-started {
-  background: var(--bg-secondary);
-  border-radius: 8px;
-  padding: 2rem;
-  margin-bottom: 2rem;
-  border: 1px solid var(--border-primary);
-}
-
-.getting-started h2 {
-  font-family: 'IBM Plex Sans', sans-serif;
-  font-size: 1.5rem;
-  font-weight: 500;
-  color: var(--text-primary);
-  margin-bottom: 1rem;
-}
-
-.getting-started p {
-  font-size: 1.125rem;
-  color: var(--text-secondary);
-  margin-bottom: 1rem;
-  line-height: 1.6;
-}
-
-.steps-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.steps-list li {
-  font-size: 1rem;
-  color: var(--text-secondary);
-  margin-bottom: 0.75rem;
-  padding-left: 1.5rem;
-  position: relative;
-  line-height: 1.6;
-}
-
-.steps-list li::before {
-  content: "✓";
-  position: absolute;
-  left: 0;
-  color: var(--accent-primary);
-  font-weight: bold;
-}
-
-.mobile-tip {
-  background: linear-gradient(135deg, 
-    color-mix(in srgb, var(--accent-primary) 10%, var(--bg-primary)) 0%, 
-    color-mix(in srgb, var(--accent-primary) 5%, var(--bg-primary)) 100%);
-  border: 1px solid var(--accent-primary);
-  border-radius: 8px;
-  padding: 1rem;
-  margin-bottom: 2rem;
-  display: flex;
-  align-items: flex-start;
-  gap: 0.75rem;
-}
-
-.mobile-tip .tip-icon {
-  width: 24px;
-  height: 24px;
-  flex-shrink: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.mobile-tip .tip-icon svg {
-  width: 20px;
-  height: 20px;
-  color: var(--accent-primary);
-}
-
-.mobile-tip p {
-  margin: 0;
-  font-size: 0.9375rem;
-  color: var(--text-primary);
-  line-height: 1.5;
-}
-
-.stats-section {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1rem;
-  margin-top: 2rem;
-}
-
-.stat-item {
-  text-align: center;
-  padding: 1.5rem 1rem;
-  background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-secondary) 100%);
-  color: var(--bg-primary);
-  border-radius: 8px;
-  box-shadow: 0 2px 8px color-mix(in srgb, var(--accent-primary) 20%, transparent);
-}
-
-.stat-number {
-  font-family: 'IBM Plex Sans', sans-serif;
-  font-size: 2rem;
-  font-weight: 600;
-  margin-bottom: 0.25rem;
-}
-
-.stat-label {
-  font-size: 0.875rem;
-  font-weight: 400;
-  opacity: 0.9;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-}
-
-/* Mobile layout */
+/* Mobile layout for topic pages */
 .mobile-layout {
   display: flex;
   flex-direction: column;
-  height: 100%;
   width: 100%;
+  height: 100%;
 }
 
 .mobile-content {
   flex: 1;
   overflow-y: auto;
-  overflow-x: hidden;
-  height: 100%;
+  padding: var(--spacing-lg);
 }
 
-/* Mobile-specific styles */
+/* Mobile responsiveness */
+@media (max-width: 1024px) {
+  .main-content {
+    padding: 0;
+  }
+}
+
 @media (max-width: 768px) {
   .app {
-    height: 100vh;
-    height: -webkit-fill-available; /* iOS Safari fix */
+    overflow-x: hidden;
   }
-  
+
   .main-content {
     flex-direction: column;
+    height: calc(100vh - 80px); /* Account for header height */
+  }
+
+  .layout-container {
     position: relative;
-    height: calc(100vh - 64px);
   }
-  
-  .desktop-layout {
-    flex-direction: column;
-    height: 100%;
+
+  .sidebar {
+    position: fixed;
+    top: 80px; /* Below header */
+    left: -280px;
+    height: calc(100vh - 80px);
+    z-index: 200;
+    transition: left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 4px 0 20px rgba(0, 0, 0, 0.15);
   }
-  
-  .sidebar-container {
-    display: none; /* Hide desktop sidebar on mobile */
+
+  .sidebar.open {
+    left: 0;
   }
-  
-  .content-container-wrapper {
-    flex: 1;
-    height: 100%;
-  }
-  
-  .welcome-hero {
-    padding: 1.5rem 1rem;
-    margin-bottom: 1.5rem;
-  }
-  
-  .welcome-hero h1 {
-    font-size: 2rem;
-  }
-  
-  .hero-subtitle {
-    font-size: 1.125rem;
-  }
-  
-  .features-grid {
-    grid-template-columns: 1fr;
-    gap: 1rem;
-    margin-bottom: 2rem;
-  }
-  
-  .feature-card {
-    padding: 1.25rem;
-  }
-  
-  .getting-started {
-    padding: 1.5rem;
-    margin-bottom: 1.5rem;
-  }
-  
-  .getting-started h2 {
-    font-size: 1.25rem;
-  }
-  
-  .getting-started p {
-    font-size: 1rem;
-  }
-  
-  .stats-section {
-    gap: 0.75rem;
-  }
-  
-  .stat-item {
-    padding: 1rem 0.75rem;
-  }
-  
-  .stat-number {
-    font-size: 1.5rem;
-  }
-  
-  .stat-label {
-    font-size: 0.75rem;
-  }
-  
-  .desktop-tip {
-    display: none; /* Hide desktop tip on mobile */
+
+  .sidebar.collapsed {
+    width: 280px; /* Keep full width on mobile when open */
   }
 }
 
-/* Prevent horizontal scroll on mobile */
-@media (max-width: 768px) {
-  html, body {
-    overflow-x: hidden;
-  }
-  
-  #root {
-    overflow-x: hidden;
-  }
-}
-
-/* Very small screens */
 @media (max-width: 480px) {
-  .welcome-hero h1 {
-    font-size: 1.75rem;
+  .sidebar {
+    width: 100%;
+    left: -100%;
   }
   
-  .hero-subtitle {
-    font-size: 1rem;
-  }
-  
-  .feature-card {
-    padding: 1rem;
-  }
-  
-  .getting-started {
-    padding: 1rem;
-  }
-  
-  .stats-section {
-    grid-template-columns: 1fr;
-    gap: 0.5rem;
+  .sidebar.open {
+    left: 0;
   }
 } 

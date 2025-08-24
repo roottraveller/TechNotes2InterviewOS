@@ -42,7 +42,6 @@ import { concurrencyControlProblems } from '../data/concurrencyControlProblems';
 import { consistentHashing } from '../data/consistentHashing';
 import { consistentHashingVsLoadBalancing } from '../data/consistentHashingVsLoadBalancing';
 import { containerization } from '../data/containerization';
-import { containers } from '../data/containers';
 import { cors } from '../data/cors';
 import { databaseDesignPrinciples } from '../data/databaseDesignPrinciples';
 import { databaseSharding } from '../data/databaseSharding';
@@ -92,7 +91,6 @@ import { networking } from '../data/networking';
 import { networkProtocols } from '../data/networkProtocols';
 import { normalization } from '../data/normalization';
 import { nosql } from '../data/nosql';
-import { oauth } from '../data/oauth';
 import { oauth2 } from '../data/oauth2';
 import { optimisticVsPessimisticLocking } from '../data/optimisticVsPessimisticLocking';
 import { osiModel } from '../data/osiModel';
@@ -102,7 +100,6 @@ import { paxosConsensus } from '../data/paxosConsensus';
 import { proxies } from '../data/proxies';
 import { quorumConcepts } from '../data/quorumConcepts';
 import { raftConsensus } from '../data/raftConsensus';
-import { rateLimit } from '../data/rateLimit';
 import { rateLimiting } from '../data/rateLimiting';
 import { rbac } from '../data/rbac';
 import { recovery } from '../data/recovery';
@@ -136,7 +133,7 @@ export const appData = {
   topics: [
     {
       id: 'full-forms',
-      title: 'Must know Full form',
+      title: 'Must know Acronyms',
       subtopics: [
         {
           id: 'tech-acronyms',
@@ -1622,6 +1619,6 @@ export const appData = {
           `
         }
       ]
-    }
-  ]
-}; 
+                }
+    ]
+  }; 

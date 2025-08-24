@@ -7,19 +7,22 @@ const ResizablePanel = ({
   leftWidth, 
   onResize, 
   minLeftWidth = 200, 
-  maxLeftWidth = 600 
+  maxLeftWidth = 600,
+  isCollapsed = false
 }) => {
   const [isResizing, setIsResizing] = useState(false);
   const [startX, setStartX] = useState(0);
   const [startWidth, setStartWidth] = useState(leftWidth);
 
   const handleMouseDown = useCallback((e) => {
+    if (isCollapsed) return; // Don't allow resizing when collapsed
+    
     setIsResizing(true);
     setStartX(e.clientX);
     setStartWidth(leftWidth);
     document.body.style.cursor = 'col-resize';
     document.body.style.userSelect = 'none';
-  }, [leftWidth]);
+  }, [leftWidth, isCollapsed]);
 
   const handleMouseMove = useCallback((e) => {
     if (!isResizing) return;
@@ -61,13 +64,14 @@ const ResizablePanel = ({
       </div>
       
       <div 
-        className={`panel-divider ${isResizing ? 'resizing' : ''}`}
+        className={`panel-divider ${isResizing ? 'resizing' : ''} ${isCollapsed ? 'collapsed' : ''}`}
         onMouseDown={handleMouseDown}
         role="separator"
         aria-orientation="vertical"
         aria-label="Resize sidebar"
-        tabIndex={0}
+        tabIndex={isCollapsed ? -1 : 0}
         onKeyDown={(e) => {
+          if (isCollapsed) return;
           if (e.key === 'ArrowLeft') {
             onResize(Math.max(minLeftWidth, leftWidth - 10));
           } else if (e.key === 'ArrowRight') {

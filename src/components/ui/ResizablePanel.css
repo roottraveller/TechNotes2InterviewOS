@@ -12,29 +12,38 @@
 }
 
 .panel-divider {
-  width: 8px;
-  background-color: #e0e0e0;
+  width: 6px;
+  background-color: var(--border-primary);
   cursor: col-resize;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: background-color 0.2s ease;
+  transition: all 0.2s ease;
   position: relative;
   flex-shrink: 0;
+  border-left: 1px solid var(--border-light);
 }
 
 .panel-divider:hover,
 .panel-divider:focus {
-  background-color: #c1c7cd;
+  background-color: var(--border-secondary);
+  width: 8px;
 }
 
 .panel-divider.resizing {
-  background-color: #0f62fe;
+  background-color: var(--accent-primary);
+  width: 8px;
 }
 
 .panel-divider:focus {
   outline: none;
-  background-color: #0f62fe;
+  background-color: var(--accent-primary);
+}
+
+.panel-divider.collapsed {
+  cursor: default;
+  opacity: 0.3;
+  pointer-events: none;
 }
 
 .divider-handle {
@@ -54,7 +63,7 @@
 .divider-line {
   width: 2px;
   height: 12px;
-  background-color: #525252;
+  background-color: var(--text-tertiary);
   border-radius: 1px;
 }
 
@@ -71,38 +80,26 @@
   min-width: 0;
 }
 
-/* Responsive design */
+/* Responsive design - disable resizing on mobile */
 @media (max-width: 768px) {
-  .resizable-panel {
-    flex-direction: column;
+  .panel-divider {
+    display: none !important;
   }
   
   .panel-left {
-    width: 100% !important;
-    height: auto;
-    max-height: 40vh;
-    overflow-y: auto;
+    width: 280px !important;
   }
-  
+}
+
+/* Tablet responsiveness - keep resizing enabled */
+@media (min-width: 769px) and (max-width: 1024px) {
   .panel-divider {
-    width: 100%;
-    height: 8px;
-    cursor: row-resize;
-    flex-direction: row;
+    width: 4px;
   }
   
-  .divider-handle {
-    flex-direction: row;
-  }
-  
-  .divider-line {
-    width: 12px;
-    height: 2px;
-  }
-  
-  .panel-right {
-    flex: 1;
-    width: 100%;
-    height: auto;
+  .panel-divider:hover,
+  .panel-divider:focus,
+  .panel-divider.resizing {
+    width: 6px;
   }
 } 

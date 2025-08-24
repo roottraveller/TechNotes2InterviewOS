@@ -17,14 +17,19 @@ export const useNavigation = (closeMobileMenu) => {
     }
   };
 
-  const handleSubtopicSelect = (subtopicId) => {
-    // Find the topic that contains this subtopic
-    const parentTopic = appData.topics.find(topic => 
-      topic.subtopics.some(subtopic => subtopic.id === subtopicId)
-    );
-    
-    if (parentTopic) {
-      navigate(`/topic/${parentTopic.id}/${subtopicId}`);
+  const handleSubtopicSelect = (subtopicId, topicId) => {
+    // Use the provided topicId if available, otherwise find the parent topic
+    if (topicId) {
+      navigate(`/topic/${topicId}/${subtopicId}`);
+    } else {
+      // Fallback: Find the topic that contains this subtopic
+      const parentTopic = appData.topics.find(topic => 
+        topic.subtopics.some(subtopic => subtopic.id === subtopicId)
+      );
+      
+      if (parentTopic) {
+        navigate(`/topic/${parentTopic.id}/${subtopicId}`);
+      }
     }
   };
 
@@ -48,12 +53,18 @@ export const useNavigation = (closeMobileMenu) => {
     closeMobileMenu();
   };
 
+  const handleBookMockInterviewClick = () => {
+    navigate('/book-mock-interview');
+    closeMobileMenu();
+  };
+
   return {
     handleTopicSelect,
     handleSubtopicSelect,
     handleHomeClick,
     handleAboutClick,
     handleTopicsClick,
-    handleMentorshipClick
+    handleMentorshipClick,
+    handleBookMockInterviewClick
   };
 }; 

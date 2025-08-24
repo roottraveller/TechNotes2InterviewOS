@@ -9,16 +9,15 @@
 .all-topics-container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: var(--spacing-xl);
 }
 
 .all-topics-header {
   text-align: center;
-  margin-bottom: 3rem;
-  padding: 2rem 0;
-  background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-primary) 100%);
-  border-radius: 16px;
-  border: 1px solid var(--border-primary);
+  margin-bottom: var(--spacing-3xl);
+  padding: var(--spacing-2xl) 0;
+  background: linear-gradient(135deg, #f6f9fc 0%, #eef2ff 100%);
+  border-radius: var(--radius-xl);
 }
 
 .all-topics-title {

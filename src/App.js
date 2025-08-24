@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { Header } from './components';
-import { About, AllTopics, Mentorship } from './components';
+import { About, AllTopics, Mentorship, BookMockInterview } from './components';
 import { HomeRoute, TopicRoute } from './routes';
 import { useResponsive, useTheme, useSidebar, useNavigation } from './hooks';
 import { Router } from './utils';
@@ -16,48 +16,41 @@ function AppContent() {
   const { isMobile } = useResponsive();
   const { isDarkMode, toggleTheme } = useTheme();
   const { 
-    isSidebarCollapsed, 
     isMobileMenuOpen, 
-    toggleSidebar, 
-    toggleMobileMenu, 
     closeMobileMenu 
   } = useSidebar();
+  const [expandedTopics, setExpandedTopics] = useState(new Set());
   
   // Navigation handlers
   const {
     handleTopicSelect,
     handleSubtopicSelect,
     handleHomeClick,
-    handleAboutClick,
     handleTopicsClick,
-    handleMentorshipClick
+    handleMentorshipClick,
+    handleBookMockInterviewClick
   } = useNavigation(closeMobileMenu);
 
   // Common props for route components
   const routeProps = {
     isMobile,
-    isSidebarCollapsed,
     isMobileMenuOpen,
     onTopicSelect: handleTopicSelect,
     onSubtopicSelect: handleSubtopicSelect,
     onMobileMenuClose: closeMobileMenu,
-    onToggleCollapse: toggleSidebar
+    expandedTopics,
+    setExpandedTopics,
   };
 
   return (
     <div className={`app ${isDarkMode ? 'dark-mode' : ''}`}>
       <Header 
         onHomeClick={handleHomeClick}
-        onAboutClick={handleAboutClick}
         onTopicsClick={handleTopicsClick}
         onMentorshipClick={handleMentorshipClick}
+        onBookMockInterviewClick={handleBookMockInterviewClick}
         onThemeToggle={toggleTheme}
-        onMobileMenuToggle={toggleMobileMenu}
         isDarkMode={isDarkMode}
-        isMobile={isMobile}
-        isMobileMenuOpen={isMobileMenuOpen}
-        isSidebarCollapsed={isSidebarCollapsed}
-        onSidebarToggle={toggleSidebar}
       />
       
       <main className="main-content">
@@ -81,6 +74,10 @@ function AppContent() {
           <Route 
             path="/mentorship" 
             element={<Mentorship />} 
+          />
+          <Route 
+            path="/book-mock-interview" 
+            element={<BookMockInterview />} 
           />
         </Routes>
       </main>

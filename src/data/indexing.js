@@ -265,9 +265,9 @@ Inefficient Queries (skip leftmost columns):
     <div class="code-block">
       <pre><code>B-Tree Structure (Order 3):
                     [50]
-                   /    \
+                   /    \\
               [20, 30]   [70, 80]
-             /   |   \   /   |   \
+             /   |   \\   /   |   \\
         [10,15] [25] [35] [60] [75] [90,95]
 
 Properties:
@@ -298,9 +298,9 @@ Search for 25:
       <pre><code>B+ Tree Structure:
 Internal Nodes (keys only):
                     [50]
-                   /    \
+                   /    \\
               [20, 30]   [70, 80]
-             /   |   \   /   |   \
+             /   |   \\   /   |   \\
 Leaf Nodes (data + pointers):
 [10,15]→[20,25]→[30,35]→[50,60]→[70,75]→[80,90]
    ↓       ↓       ↓       ↓       ↓       ↓

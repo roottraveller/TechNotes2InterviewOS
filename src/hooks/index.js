@@ -6,4 +6,5 @@
 export { useResponsive } from './useResponsive';
 export { useTheme } from './useTheme';
 export { useSidebar } from './useSidebar';
-export { useNavigation } from './useNavigation'; 
+export { useNavigation } from './useNavigation';
+export { useResizableSidebar } from './useResizableSidebar'; 

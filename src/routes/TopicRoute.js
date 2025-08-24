@@ -1,6 +1,8 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import { Sidebar, ContentPanel } from '../components';
+import { ResizablePanel } from '../components/ui';
+import { useResizableSidebar } from '../hooks';
 import { appData } from '../config';
 
 /**
@@ -9,14 +11,15 @@ import { appData } from '../config';
  */
 const TopicRoute = ({
   isMobile,
-  isSidebarCollapsed,
   isMobileMenuOpen,
   onTopicSelect,
   onSubtopicSelect,
   onMobileMenuClose,
-  onToggleCollapse
+  expandedTopics,
+  setExpandedTopics
 }) => {
   const { topicId, subtopicId } = useParams();
+  const { sidebarWidth, isCollapsed, handleResize, toggleCollapse, minWidth, maxWidth } = useResizableSidebar();
 
   const getSelectedContent = () => {
     if (!topicId) {
@@ -27,6 +30,7 @@ const TopicRoute = ({
     }
 
     const selectedTopic = appData.topics.find(topic => topic.id === topicId);
+    
     if (!selectedTopic) {
       return {
         title: 'Topic Not Found',
@@ -36,6 +40,7 @@ const TopicRoute = ({
 
     if (subtopicId) {
       const selectedSubtopic = selectedTopic.subtopics.find(subtopic => subtopic.id === subtopicId);
+      
       if (!selectedSubtopic) {
         return {
           title: 'Subtopic Not Found',
@@ -63,7 +68,7 @@ const TopicRoute = ({
   };
 
   return isMobile ? (
-    // Mobile layout
+    // Mobile layout - no resizing
     <div className="mobile-layout">
       <Sidebar
         topics={appData.topics}
@@ -74,15 +79,25 @@ const TopicRoute = ({
         isMobile={isMobile}
         isMobileMenuOpen={isMobileMenuOpen}
         onMobileMenuClose={onMobileMenuClose}
+        expandedTopics={expandedTopics}
+        setExpandedTopics={setExpandedTopics}
+        isCollapsed={false}
+        onToggleCollapse={() => {}}
+        onSearchChange={() => {}}
       />
       <div className="mobile-content">
         <ContentPanel content={getSelectedContent()} />
       </div>
     </div>
   ) : (
-    // Desktop layout with collapsible sidebar
-    <div className="desktop-layout">
-      <div className={`sidebar-container ${isSidebarCollapsed ? 'collapsed' : ''}`}>
+    // Desktop/Tablet layout - with resizable sidebar
+    <ResizablePanel
+      leftWidth={sidebarWidth}
+      onResize={handleResize}
+      minLeftWidth={minWidth}
+      maxLeftWidth={maxWidth}
+      isCollapsed={isCollapsed}
+      leftPanel={
         <Sidebar
           topics={appData.topics}
           selectedTopic={topicId}
@@ -92,14 +107,17 @@ const TopicRoute = ({
           isMobile={isMobile}
           isMobileMenuOpen={isMobileMenuOpen}
           onMobileMenuClose={onMobileMenuClose}
-          isCollapsed={isSidebarCollapsed}
-          onToggleCollapse={onToggleCollapse}
+          expandedTopics={expandedTopics}
+          setExpandedTopics={setExpandedTopics}
+          isCollapsed={isCollapsed}
+          onToggleCollapse={toggleCollapse}
+          onSearchChange={() => {}}
         />
-      </div>
-      <div className="content-container-wrapper">
+      }
+      rightPanel={
         <ContentPanel content={getSelectedContent()} />
-      </div>
-    </div>
+      }
+    />
   );
 };
 

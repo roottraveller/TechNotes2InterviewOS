@@ -1,212 +1,220 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
+import {
+  ChevronDown,
+  ChevronLeft,
+  ChevronRight,
+  Network,
+} from 'lucide-react';
 import './Sidebar.css';
 
-const Sidebar = ({ 
-  topics, 
-  selectedTopic, 
-  selectedSubtopic, 
-  onTopicSelect, 
+const topicIcons = {
+  'Must know Acronyms': (
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+      <circle cx="12" cy="12" r="12" fill="white" stroke="currentColor" strokeWidth="1"/>
+      <text x="12" y="16" textAnchor="middle" fontSize="7" fontWeight="bold" fill="currentColor">ACRO</text>
+    </svg>
+  ),
+  'Must know Terms': (
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+      <circle cx="12" cy="12" r="12" fill="white" stroke="currentColor" strokeWidth="1"/>
+      <text x="12" y="16" textAnchor="middle" fontSize="7" fontWeight="bold" fill="currentColor">TERMS</text>
+    </svg>
+  ),
+  'System Design HLD': (
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+      <circle cx="12" cy="12" r="12" fill="white" stroke="currentColor" strokeWidth="1"/>
+      <text x="12" y="16" textAnchor="middle" fontSize="7" fontWeight="bold" fill="currentColor">HLD</text>
+    </svg>
+  ),
+  'System Design LLD': (
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+      <circle cx="12" cy="12" r="12" fill="white" stroke="currentColor" strokeWidth="1"/>
+      <text x="12" y="16" textAnchor="middle" fontSize="7" fontWeight="bold" fill="currentColor">LLD</text>
+    </svg>
+  ),
+  'Java Quick Reference': (
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+      <circle cx="12" cy="12" r="12" fill="white" stroke="currentColor" strokeWidth="1"/>
+      <text x="12" y="16" textAnchor="middle" fontSize="6" fontWeight="bold" fill="currentColor">JAVA</text>
+    </svg>
+  ),
+  'Kafka & Zookeeper': (
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+      <circle cx="12" cy="12" r="12" fill="white" stroke="currentColor" strokeWidth="1"/>
+      <text x="12" y="16" textAnchor="middle" fontSize="7" fontWeight="bold" fill="currentColor">KZ</text>
+    </svg>
+  ),
+  RabbitMQ: (
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+      <circle cx="12" cy="12" r="12" fill="white" stroke="currentColor" strokeWidth="1"/>
+      <text x="12" y="16" textAnchor="middle" fontSize="7" fontWeight="bold" fill="currentColor">RMQ</text>
+    </svg>
+  ),
+  'Redis Cache': (
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+      <circle cx="12" cy="12" r="12" fill="white" stroke="currentColor" strokeWidth="1"/>
+      <text x="12" y="16" textAnchor="middle" fontSize="6" fontWeight="bold" fill="currentColor">REDIS</text>
+    </svg>
+  ),
+  AWS: (
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+      <circle cx="12" cy="12" r="12" fill="white" stroke="currentColor" strokeWidth="1"/>
+      <text x="12" y="16" textAnchor="middle" fontSize="8" fontWeight="bold" fill="currentColor">AWS</text>
+    </svg>
+  ),
+  // Selected Kubernetes icon (Option 5 - Circle with K8s text)
+  'Kubernetes (K8s)': (
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+      <circle cx="12" cy="12" r="12" fill="white" stroke="currentColor" strokeWidth="1"/>
+      <text x="12" y="16" textAnchor="middle" fontSize="8" fontWeight="bold" fill="currentColor">K8s</text>
+    </svg>
+  ),
+  // Docker Icon - Final selection (DOM)
+  'Docker & Container': (
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+      <circle cx="12" cy="12" r="12" fill="white" stroke="currentColor" strokeWidth="1"/>
+      <text x="12" y="16" textAnchor="middle" fontSize="7" fontWeight="bold" fill="currentColor">DOM</text>
+    </svg>
+  ),
+  // Aerospike Icon - Default
+  'Aerospike': (
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+      <circle cx="12" cy="12" r="12" fill="white" stroke="currentColor" strokeWidth="1"/>
+      <text x="12" y="16" textAnchor="middle" fontSize="8" fontWeight="bold" fill="currentColor">A</text>
+    </svg>
+  ),
+  // Additional Icons with Custom Text
+  'Memcached': (
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+      <circle cx="12" cy="12" r="12" fill="white" stroke="currentColor" strokeWidth="1"/>
+      <text x="12" y="16" textAnchor="middle" fontSize="7" fontWeight="bold" fill="currentColor">MEM</text>
+    </svg>
+  ),
+  'MongoDB': (
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+      <circle cx="12" cy="12" r="12" fill="white" stroke="currentColor" strokeWidth="1"/>
+      <text x="12" y="16" textAnchor="middle" fontSize="7" fontWeight="bold" fill="currentColor">MONGO</text>
+    </svg>
+  ),
+  'Neo4J': (
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+      <circle cx="12" cy="12" r="12" fill="white" stroke="currentColor" strokeWidth="1"/>
+      <text x="12" y="16" textAnchor="middle" fontSize="7" fontWeight="bold" fill="currentColor">Neo4J</text>
+    </svg>
+  ),
+  'MySQL & SQL': (
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+      <circle cx="12" cy="12" r="12" fill="white" stroke="currentColor" strokeWidth="1"/>
+      <text x="12" y="16" textAnchor="middle" fontSize="7" fontWeight="bold" fill="currentColor">MySQL</text>
+    </svg>
+  ),
+  'Cassandra & HBase': (
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+      <circle cx="12" cy="12" r="12" fill="white" stroke="currentColor" strokeWidth="1"/>
+      <text x="12" y="16" textAnchor="middle" fontSize="7" fontWeight="bold" fill="currentColor">C&H</text>
+    </svg>
+  ),
+  default: <Network size={20} />,
+};
+
+const Sidebar = ({
+  topics,
+  selectedTopic,
+  selectedSubtopic,
+  onTopicSelect,
   onSubtopicSelect,
-  isMobile,
-  isMobileMenuOpen,
-  onMobileMenuClose,
-  isCollapsed = false,
-  onToggleCollapse
+  expandedTopics,
+  setExpandedTopics,
+  isCollapsed,
+  onToggleCollapse,
 }) => {
-  const [hoveredTopic, setHoveredTopic] = useState(null);
-
-  const handleTopicClick = (topicId) => {
-    // Toggle behavior: if topic is already selected, deselect it (go to home)
-    // If topic is not selected, select it
-    if (selectedTopic === topicId) {
-      onTopicSelect(null); // This will navigate to home page
-    } else {
-      onTopicSelect(topicId);
+  const handleTopicClick = (topic) => {
+    // If topic has only one subtopic, navigate directly to it
+    if (topic.subtopics.length === 1) {
+      onSubtopicSelect(topic.subtopics[0].id, topic.id);
+      return;
     }
-  };
-
-  const handleSubtopicClick = (subtopicId) => {
-    onSubtopicSelect(subtopicId);
-    if (isMobile) {
-      onMobileMenuClose();
-    }
-  };
-
-  const handleOverlayClick = () => {
-    if (isMobile) {
-      onMobileMenuClose();
-    }
-  };
-
-  // Get topic initial for collapsed state
-  const getTopicInitial = (title) => {
-    if (title === 'JavaScript') return 'JS';
-    if (title === 'React') return 'R';
-    if (title === 'Algorithms & Data Structures') return 'A';
-    if (title === 'System Design') return 'SD';
-    return title.charAt(0);
-  };
-
-  // Close mobile menu when clicking outside
-  useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (isMobile && isMobileMenuOpen && !event.target.closest('.sidebar') && !event.target.closest('.mobile-menu-button')) {
-        onMobileMenuClose();
+    
+    // If topic has multiple subtopics, toggle expansion
+    setExpandedTopics((prev) => {
+      const newSet = new Set(prev);
+      if (newSet.has(topic.id)) {
+        newSet.delete(topic.id);
+      } else {
+        newSet.add(topic.id);
       }
-    };
+      return newSet;
+    });
+    onTopicSelect(topic.id);
+  };
 
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => document.removeEventListener('mousedown', handleClickOutside);
-  }, [isMobile, isMobileMenuOpen, onMobileMenuClose]);
+  const handleSubtopicClick = (subtopicId, topicId) => {
+    onSubtopicSelect(subtopicId, topicId);
+  };
 
-  // Prevent body scroll when mobile menu is open
-  useEffect(() => {
-    if (isMobile && isMobileMenuOpen) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = 'unset';
-    }
+  const getTopicIcon = (title) => topicIcons[title] || topicIcons.default;
 
-    return () => {
-      document.body.style.overflow = 'unset';
-    };
-  }, [isMobile, isMobileMenuOpen]);
-
-  // Mobile overlay
-  if (isMobile && isMobileMenuOpen) {
-    return (
-      <>
-        <div className="mobile-overlay" onClick={handleOverlayClick} />
-        <aside className={`sidebar mobile ${isMobileMenuOpen ? 'mobile-open' : ''}`}>
-          <div className="sidebar-header">
-            <h2>Topics</h2>
-            <button 
-              className="mobile-close-button"
-              onClick={onMobileMenuClose}
-              aria-label="Close menu"
-            >
-              ×
-            </button>
-          </div>
-          <div className="sidebar-content">
-            {topics.map((topic) => (
-              <div key={topic.id} className="topic-section">
-                <button
-                  className={`topic-button ${selectedTopic === topic.id ? 'selected' : ''}`}
-                  onClick={() => handleTopicClick(topic.id)}
-                  aria-expanded={selectedTopic === topic.id}
-                >
-                  <span className="topic-icon" />
-                  <span className="topic-title">{topic.title}</span>
-                  <span className="topic-count">{topic.subtopics.length}</span>
-                </button>
-                {selectedTopic === topic.id && (
-                  <div className="subtopics">
-                    {topic.subtopics.map((subtopic) => (
-                      <button
-                        key={subtopic.id}
-                        className={`subtopic-button ${selectedSubtopic === subtopic.id ? 'selected' : ''}`}
-                        onClick={() => handleSubtopicClick(subtopic.id)}
-                      >
-                        <span className="subtopic-dot" />
-                        <span className="subtopic-title">{subtopic.title}</span>
-                      </button>
-                    ))}
-                  </div>
-                )}
-              </div>
-            ))}
-          </div>
-        </aside>
-      </>
-    );
-  }
-
-  // Desktop sidebar
   return (
-    <aside className={`sidebar desktop ${isCollapsed ? 'collapsed' : ''}`}>
+    <div className={`sidebar ${isCollapsed ? 'collapsed' : ''}`}>
       <div className="sidebar-header">
-        {!isCollapsed && <h2>Topics</h2>}
-        {!isCollapsed && (
-          <button 
-            className="sidebar-toggle-btn"
-            onClick={onToggleCollapse}
-            title="Collapse sidebar"
-            aria-label="Collapse sidebar"
-          />
-        )}
+        {!isCollapsed && <span className="topics-label">TOPICS</span>}
+        <button 
+          className="collapse-toggle"
+          onClick={onToggleCollapse}
+          aria-label={isCollapsed ? 'Expand sidebar' : 'Collapse sidebar'}
+          title={isCollapsed ? 'Expand sidebar' : 'Collapse sidebar'}
+        >
+          {isCollapsed ? <ChevronRight size={16} /> : <ChevronLeft size={16} />}
+        </button>
       </div>
       <div className="sidebar-content">
         {topics.map((topic) => (
           <div key={topic.id} className="topic-section">
             <button
               className={`topic-button ${selectedTopic === topic.id ? 'selected' : ''}`}
-              onClick={() => handleTopicClick(topic.id)}
-              onMouseEnter={() => isCollapsed && setHoveredTopic(topic.id)}
-              onMouseLeave={() => isCollapsed && setHoveredTopic(null)}
-              aria-expanded={selectedTopic === topic.id}
-              aria-label={topic.title}
-              title={isCollapsed ? topic.title : ''}
+              onClick={() => handleTopicClick(topic)}
+              aria-expanded={topic.subtopics.length > 1 ? expandedTopics.has(topic.id) : undefined}
+              title={isCollapsed ? topic.title : undefined}
             >
-              <span className="topic-icon">
-                {isCollapsed && <span className="topic-initial">{getTopicInitial(topic.title)}</span>}
-              </span>
+              <span className="topic-icon">{getTopicIcon(topic.title)}</span>
               {!isCollapsed && (
                 <>
                   <span className="topic-title">{topic.title}</span>
-                  <span className="topic-count">{topic.subtopics.length}</span>
+                  {topic.subtopics.length > 1 && (
+                    <>
+                      <span className="topic-count">{topic.subtopics.length}</span>
+                      <span
+                        className={`topic-arrow ${
+                          expandedTopics.has(topic.id) ? 'expanded' : ''
+                        }`}
+                      >
+                        <ChevronDown size={16} />
+                      </span>
+                    </>
+                  )}
                 </>
               )}
             </button>
-            {selectedTopic === topic.id && !isCollapsed && (
+            {!isCollapsed && topic.subtopics.length > 1 && expandedTopics.has(topic.id) && (
               <div className="subtopics">
                 {topic.subtopics.map((subtopic) => (
                   <button
                     key={subtopic.id}
-                    className={`subtopic-button ${selectedSubtopic === subtopic.id ? 'selected' : ''}`}
-                    onClick={() => handleSubtopicClick(subtopic.id)}
+                    className={`subtopic-button ${
+                      selectedSubtopic === subtopic.id ? 'selected' : ''
+                    }`}
+                    onClick={() => handleSubtopicClick(subtopic.id, topic.id)}
                   >
-                    <span className="subtopic-dot" />
-                    <span className="subtopic-title">{subtopic.title}</span>
+                    {subtopic.title}
                   </button>
                 ))}
-              </div>
-            )}
-            
-            {/* Collapsed state tooltip */}
-            {isCollapsed && hoveredTopic === topic.id && (
-              <div className="collapsed-tooltip">
-                <div className="tooltip-content">
-                  <h4>{topic.title}</h4>
-                  <div className="tooltip-subtopics">
-                    {topic.subtopics.map((subtopic) => (
-                      <button
-                        key={subtopic.id}
-                        className={`tooltip-subtopic ${selectedSubtopic === subtopic.id ? 'selected' : ''}`}
-                        onClick={() => handleSubtopicClick(subtopic.id)}
-                      >
-                        {subtopic.title}
-                      </button>
-                    ))}
-                  </div>
-                </div>
               </div>
             )}
           </div>
         ))}
       </div>
-      
-      {/* Collapsed toggle button */}
-      {isCollapsed && (
-        <button 
-          className="sidebar-toggle-btn"
-          onClick={onToggleCollapse}
-          title="Expand sidebar"
-          aria-label="Expand sidebar"
-        />
-      )}
-    </aside>
+    </div>
   );
 };
 
-export default Sidebar; 
+export default Sidebar;
